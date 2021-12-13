@@ -1,9 +1,10 @@
 ### Olá! Meu nome é Jeferson
 
+##
 <div align="center">
   <a href="https://github.com/yljeferson">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&locale=pt-br&title_color=fefefe&text_color=9e9e9e&icon_color=78fe96&border_color=cac9c9&bg_color=151515"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yljeferson&layout=compact&langs_count=7&locale=pt-br&title_color=fefefe&text_color=9e9e9e&icon_color=78fe96&border_color=cac9c9&bg_color=151515"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&hide_rank=false&custom_title=Atividade&locale=pt-br&title_color=fefefe&text_color=9e9e9e&icon_color=78fe96&border_color=cac9c9&bg_color=151515"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yljeferson&layout=compact&langs_count=7&custom_title=Linguagens&locale=pt-br&title_color=fefefe&text_color=9e9e9e&icon_color=78fe96&border_color=cac9c9&bg_color=151515"/>
 </div>
   
   
@@ -42,7 +43,8 @@ Stats Card Exclusive Options:
   line_height - Sets the line-height between text (number)
   custom_title - Sets a custom title for the card
   disable_animations - Disables all animations in the card (boolean)
-  Repo Card Exclusive Options:
+ 
+Repo Card Exclusive Options:
   show_owner - Show the repo's owner name (boolean)
 
 Language Card Exclusive Options:
