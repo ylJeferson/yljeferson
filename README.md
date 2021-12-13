@@ -1,4 +1,11 @@
-## Olá! Meu nome é Jeferson <br> teste
+<br>
+<div align="center" style="color:red">
+  <span style="color:#f03c15">test1</span> <br>
+  <span>test2</span>
+</div>
+<br>
+
+##
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
@@ -11,9 +18,15 @@
 
 ##
 
-<div align="center" style="width:400">
+<!--
+<div align="center">
+  test
+</div>
+-->
+
+<div align="center">
   <a href="https://github.com/yljeferson">
-    <img width="420em" height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&custom_title=Status&locale=pt-br&title_color=fefefe&text_color=9e9e9e&icon_color=78fe96&border_color=cac9c9&bg_color=151515"/>
+    <img width="420em" height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&custom_title=Estatisticas&locale=pt-br&title_color=fefefe&text_color=9e9e9e&icon_color=78fe96&border_color=cac9c9&bg_color=151515"/>
   </a>
 
   <a href="https://github.com/yljeferson">
@@ -22,18 +35,9 @@
 </div>
 
 <!--
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
 &custom_title=Estatisticas
 &hide_title=true
-
+<img align="right" alt="Rafa-gif" src="https://cdn.discordapp.com/attachments/795358919417397249/825430589581688872/hi.gif">
 title_color - Card's title color (hex color)
 text_color - Body text color (hex color)
 icon_color - Icons color if available (hex color)
