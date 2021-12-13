@@ -34,6 +34,7 @@
   </a>
 </div>
 
+![Snake animation](https://github.com/yljeferson/yljeferson/blob/output/github-contribution-grid-snake.svg)
 <!--
 &custom_title=Estatisticas
 &hide_title=true
