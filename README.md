@@ -2,7 +2,7 @@
 <div align="center" style="color:red">
   <span style="color:#f03c15">Jeferson Hugo da Silva</span> <br>
   <span>Gamer</span> <br>
-  <span>Programador</span>
+  <span>Programador</span> <br>
   <span>Entusiasta do aprendizado contínuo</span>
 </div>
 <br>
