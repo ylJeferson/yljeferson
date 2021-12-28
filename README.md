@@ -1,5 +1,5 @@
 
-<img width="400em" height="180em" src="https://github-animated-banner.vercel.app/api?bgcolor=%23ffffff&name=Hello%20I'm%20Jeferson&namefont=VT323&namecolor=%23ff5779&anim=and%20I%20made;this%20animation%20for%20you;to%20use%20as%20a%20banner;on%20your%20GitHub;Enjoy!!!&animfont=Varela%20Round&animcolor=%236941d3"/>
+<img width="100%" src="https://github-animated-banner.vercel.app/api?bgcolor=transparent&name=Jeferson&namefont=Tangerine&namecolor=%23ff5779&anim=In;search;of;development&animfont=Varela%20Round&animcolor=%236941d3"/>
 
 ##
 
