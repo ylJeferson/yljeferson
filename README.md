@@ -1,3 +1,6 @@
+[whatever]: ?bgcolor=transparent&name=Jeferson&namefont=Tangerine&namecolor=%23ff5779&anim=In;search;of;development&animfont=Varela%20Round&animcolor=%236941d3
+[whatever]: ?bgcolor=transparent&name=Jeferson&namefont=Varela%20Round&namecolor=%23ff5779&anim=and%20I%20made;this%20animation%20for%20you;to%20use%20as%20a%20banner;on%20your%20GitHub;Enjoy!!!&animfont=Flow%20Rounded&animcolor=%236941d3
+
 ##
 
 <div align="center">
