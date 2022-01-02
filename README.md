@@ -5,11 +5,11 @@
 
 ##
 
-<div align="center">
-  <a href="https://github.com/yljeferson">
-    <img width="100%" src="https://github-animated-banner.vercel.app/api?bgcolor=transparent&name=Jeferson&namefont=Tangerine&namecolor=%23ff5779&anim=In;search;of;development&animfont=Varela%20Round&animcolor=%236941d3"/>
-  </a>
-</div>
+[whatever]: <div align="center">
+[whatever]: <a href="https://github.com/yljeferson">
+[whatever]: <img width="100%" src="https://github-animated-banner.vercel.app/api?bgcolor=transparent&name=Jeferson&namefont=Tangerine&namecolor=%23ff5779&anim=In;search;of;development&animfont=Varela%20Round&animcolor=%236941d3"/>
+[whatever]: </a>
+[whatever]: </div>
 
 ##
 
