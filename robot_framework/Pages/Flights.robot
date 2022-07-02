@@ -3,7 +3,6 @@ Resource    ../Infra/base.robot
 
 *** Variables ***
 ${TempoDeEspera}    50
-${IrPara}    resr
 
 ${ViajarDE}    gru
 ${ViajarATE}    jpa
