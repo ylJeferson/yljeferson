@@ -1,7 +1,7 @@
 # Global
-# .config
+.config
 _pycache_
-# desktop.ini
+desktop.ini
 node_modules
 
 # Cypress
