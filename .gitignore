@@ -1,2 +1,14 @@
-.gitignore
-desktop.ini
+# Global
+_pycache_
+node_modules
+
+# Cypress
+cypress/cypress/fixtures
+cypress/cypress/downloads
+cypress/cypress/support/commands.js
+
+1-getting-started
+2-advanced-examples
+
+# Robot Framework
+[00]utput
