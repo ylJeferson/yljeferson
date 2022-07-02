@@ -6,6 +6,9 @@ class CheckoutOverview {
     btnFinishCheckout = '[data-test="finish"]';
     summaryInfo = '.summary_info';
     lblPrice = '.inventory_item_price'
+    ItemTotal = '.summary_subtotal_label'
+    Tax = '.summary_tax_label'
+    Total = '.summary_total_label'
 
     //ACTIONS
     assertBannerText(bannerText) {
@@ -32,10 +35,6 @@ class CheckoutOverview {
         }).invoke('text').as('CheckoutLabelPrices')
     }
 
-    getItemsPrices() {
-
-    }
-
     //FUNCTIONALITIES
     checkIfBannerExist(bannerText) {
         this.assertBannerText(bannerText);
@@ -49,26 +48,26 @@ class CheckoutOverview {
         this.clickFinishCheckout();
     }
 
-    checkTotalPrice(products, valuePrices, regex) {
-        let soma = 0;
+    checkPriceValues(products, valuePrices, regex) {
+        let total = 0;
+        let totalFrete = 0;
+        let totalProdutos = 0;
         let CheckoutPrices = valuePrices.split(regex);
+        var y = CheckoutPrices.map(s => s.slice(1));
 
-        console.log(CheckoutPrices);
+        for(var i = 0; i < y.length; i++) {
+            let productInCart = products.filter(item => item == i + 1)
+            if (productInCart.length == 1) {
+                    totalProdutos += parseFloat(y[i]);
+            }
+        }
 
-        var y = CheckoutPrices.map(s => s.slice(1).replace('.', ','));
+        totalFrete = Math.round(totalProdutos / 10 * .8 * 100) / 100
+        total = totalProdutos + totalFrete
 
-        console.log(y);
-
-        soma = y[0] + y[1];
-        console.log(soma)
-
-        // console.log(y.reduce((total, produto) => total + produto.preco));
-
-
-        // for(var i = 0; i < CheckoutPrices.length; i++) {
-        //     soma += CheckoutPrices[i];
-        // }
-        // console.log(soma);
+        cy.get(this.ItemTotal).invoke('text').should('eq', `Item total: $${totalProdutos}`)
+        cy.get(this.Tax).invoke('text').should('eq', `Tax: $${totalFrete}`)
+        cy.get(this.Total).invoke('text').should('eq', `Total: $${total}`)
     }
 }
 

@@ -47,7 +47,6 @@ describe("Funcionalidade: Página da Lista com os Produtos",()=>{
 
     it("Verificar ordenação dos produtos (Z-A)",()=>{
         productsPage.orderProducts('za');
-        cy.wait(500)
         productsPage.verifyIfOrderIsCorrect('za');
     });
 

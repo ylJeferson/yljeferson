@@ -20,6 +20,10 @@ describe("Funcionalidade: Testes de adicionar e remover produtos no carrinho", f
         productsPage.checkIfBannerExist('Products');
     })
 
+    it("Copiar todos os valores da tela de produtos",()=>{
+        productsPage.getAllLabelPrices();
+    });
+
     it("Adicionar e depois remover produtos no carrinho", function(){
         productsPage.AddProductsToCart([1, 3, 4, 5]);
         productsPage.goToCart();
@@ -100,6 +104,17 @@ describe("Funcionalidade: Testes de adicionar e remover produtos no carrinho", f
         checkoutOverview.backToProductsPage();
     });
 
+    it("Adicionar produtos, continuar compra e verificar se o preço do carrinho está correto", function(){
+        let productsToAddInCart = [1, 3, 4]
+        let LabelPrices = [this.ProductsLabelPrices, /(?=\$)/];
+
+        productsPage.AddProductsToCart(productsToAddInCart);
+        productsPage.goToCart();
+        cartPage.goToCheckout();
+        checkoutPage.typeInformationsAndContinueCheckout('Jeferson', 'Hugo', '40028-922');
+        checkoutOverview.checkPriceValues(productsToAddInCart, LabelPrices[0], LabelPrices[1]);
+    });
+
     it("Adicionar produtos, finalizar a compra e verificar quantidade de itens no carrinho", function(){
         productsPage.AddProductsToCart([1, 3, 4]);
         productsPage.goToCart();
@@ -120,23 +135,4 @@ describe("Funcionalidade: Testes de adicionar e remover produtos no carrinho", f
 
         productsPage.assertQuantityProductsInCartBadge(0);
     });
-
-    // it("Teste 1", function(){
-    //     productsPage.AddProductsToCart('all');
-    //     productsPage.goToCart();
-    //     cartPage.goToCheckout();
-    //     checkoutPage.typeInformationsAndContinueCheckout('Jeferson', 'Hugo', '40028-922');
-    //     checkoutOverview.getAllLabelPrices();
-    // });
-
-    // it("Teste 2", function(){
-    //     let productsToAddInCart = [1, 3, 4]
-    //     let LabelPrices = [this.CheckoutLabelPrices, /(?=\$)/];
-
-    //     productsPage.AddProductsToCart(productsToAddInCart);
-    //     productsPage.goToCart();
-    //     cartPage.goToCheckout();
-    //     checkoutPage.typeInformationsAndContinueCheckout('Jeferson', 'Hugo', '40028-922');
-    //     checkoutOverview.checkTotalPrice(productsToAddInCart, LabelPrices[0], LabelPrices[1]);
-    // });
 });
