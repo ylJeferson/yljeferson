@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "label": "Rodar todos os testes",
+            "command": "robot",
+            "args": [
+                "-o",
+                "NONE",
+                "-r",
+                "Output/Reports/report",
+                "-l",
+                "NONE",
+                "./TestCases/"
+            ]
+        },
+        {
+            "label": "Abrir no navegador",
+            "command": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "args": [
+                "${file}"
+            ]
+        },
+        {
+            "label": "Abrir no navegador - Reports",
+            "command": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "args": [
+                "${workspaceFolder}/Output/Reports/"
+            ]
+        }
+    ]
+}
