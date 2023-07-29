@@ -1,0 +1,16 @@
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\bin\Release\Jeferson e Samuel.exe.config
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmAplicativos.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmBackup.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmCaixa.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmCategorias.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmCidades.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmClientes.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmConsulta.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmFornecedores.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmLogin.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmMenu.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmProdutos.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmSplash.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmUsuarios.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.frmVendas.resources
+C:\Users\yLire\Documents\Projetos\Visual\16113_16190\Jeferson e Samuel\obj\Release\Jeferson_e_Samuel.csproj.GenerateResource.Cache
