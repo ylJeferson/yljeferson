@@ -1,0 +1,7 @@
+HKEY_CLASSES_ROOT\TeamViewerSession\shell\open\command [1 5 9 17]
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation [1 5 9 17]
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System [1 5 9 17]
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer [1 5 9 17]
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Lectra systemes\ModarisV8R1\Configuration\colors [1 5 9 17]
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Lectra systemes\ModarisV8R2\Configuration\colors [1 5 9 17]
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Lectra systemes\ModarisV8R3\Configuration\colors [1 5 9 17]

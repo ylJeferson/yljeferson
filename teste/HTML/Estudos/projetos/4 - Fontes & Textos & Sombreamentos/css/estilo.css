@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Times;
+}
+
+@font-face {
+  font-family: jogo;
+  src:url(../fontes/jogo.ttf);
+}
+
+.principal {
+  background-color: #fff;
+  width: 400px;
+  
+  margin: auto;
+  padding: 10px;
+}
+
+header {
+  background-color: #F8F8FF;
+  width: 400px;
+  
+  padding: 10px;
+  box-sizing: border-box;
+  
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 10px 10px 4px #778899;
+}
+
+article {
+  background-color: #F8F8FF;
+  width: 400px;
+  
+  margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font: 25px jogo;
+}
+
+h3 {
+  font-family: Arial;
+}
+
+p {
+  text-align: justify;
+  font-family: 'Indie Flower', cursive;
+}

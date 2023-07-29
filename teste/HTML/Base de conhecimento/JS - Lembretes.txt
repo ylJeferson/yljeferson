@@ -1,0 +1,100 @@
+Quando o "#" é utilizado, ele indica o ID da tag.
+
+1 - Declaração de variáveis e constantes
+
+	Sintaxe
+		Let
+			Sintaxe: let variavel = Valor¹;
+
+		Const
+			Sintaxe: const variavel = Valor¹;
+
+		Var
+			Sintaxe: var variavel = Valor¹;
+
+	Valor¹
+		número: 15;
+		string: 'teste';
+		boolean: true;
+
+	Obs:
+		Podem ser usadas funções na variavel, e também objetos.
+		Não é necessário a declaração do tipo da variável.
+		O tipo "Var" é mais utilizado em versões antigas.
+
+2 - Vetores
+
+	Sintaxe
+		let vetor = new Array(valor, valor, valor);
+		let vetor = (valor, valor, valor);
+
+			Adicionar itens
+				vetor.push(valor);
+
+	Teste
+		console.log(variável[0]);
+
+3 - Declaração de Funções
+
+	Sintaxe
+		function nome¹(parâmetros²) {
+			codificação³;
+		}
+
+		function(parâmetros²) {
+			codificação³;
+		}
+
+		let nome¹ = (parâmetros²) => {
+			codificação³;
+		}
+
+	nome¹ = Nome da função. ex: somar;
+	parâmetros² = parâmetros para função. ex: function somar(a, b, c);
+	codificação³ = linhas de código. return a+b+c;
+
+4 - Declaração de objetos
+
+	Sintaxe
+		let objeto {
+			tipo1: valor;
+			tipo2: valor;
+			tipo3: valor;
+		}
+
+	Teste
+		console.dir(agenda);
+		console.log(agenda.tipo2);
+
+	Obs:
+		Também pode-se usar funções em objetos
+
+5 - Condicional (IF & ELSE)
+	
+	Sintaxe
+		if (condição1) {
+
+			codificação;
+
+		} else if (condição2) {
+
+			codificação;
+
+		} else {
+
+			codificação;
+
+		}
+
+
+6 - Loops
+	let vetor = [1, 2, 3, 4];
+
+	vetor.forEach(function(dia) {
+		console.log(dia);
+	})
+
+
+	for (let dia of vetor) {
+		console.log(dia)
+	}

@@ -1,0 +1,171 @@
+@media (device-width: 1536px) and (device-height: 864px) {
+    .navList {
+    margin-left: -2.1%;
+  }
+
+  .navList li {
+    letter-spacing: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .naviBrand {
+    width: 8vh;
+    height: 8vh;
+  }
+
+  .hdrBackground {
+    height: 100vh;
+  }
+
+  .hdrTable {
+    color: #000;
+    height: auto;
+    /*margin-top: 34%;*/
+  }
+/*
+  .hdrIntroduction {
+    font-size: 2.5em;
+  }
+
+  .hdrNextSection {
+    border-top: 25px solid #fff;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+
+  .hdrNextSection:hover {
+    border-top: 25px solid #191818;
+  }
+*/
+  #jogos{
+    padding: 0 0 0 0;
+    margin: -9vh 0 0 0;
+  }
+
+  .gmContent {
+    margin: 0 0 3vh 0;
+  }
+
+  .gmContent h1 {
+    padding: 2vh 0 0 0;
+  }
+
+  .gmSlider {
+    height: 30vh;
+    margin: 0 0 0 0;
+  }
+
+  .gmSliderPrev, .gmSliderNext {
+    margin: 0 2%;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+  }
+
+  .gmSliderPrev {
+    border-right: 25px solid #b52874;
+  }
+
+  .gmSliderPrev:hover {
+    border-right: 25px solid #ff6500;
+  }
+
+  .gmSliderNext {
+    border-left: 25px solid #ff6500;
+  }
+
+  .gmSliderNext:hover {
+    border-left: 25px solid #b52874;
+  }
+
+  .gmNextGame {
+    border-top: 25px solid #000;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+
+  .gmNextGame:hover {
+    border-top: 25px solid #191818;
+  }
+
+  .gmRoleta {
+    width: 95%;
+    height: 65vh;
+    margin: 0 0 0 2.5vw;
+  }
+
+  .gmTabuleiro {
+    height: 65vh;
+    margin: 0 0 -5vh 0;
+  }
+
+  #regras{
+    padding: .45vh 0 2.5vh 0;
+    margin: 0vh 0 -2.5vh 0;
+  }
+
+  .rgrTop {
+    margin-top: 2vh;
+  }
+
+  .rgrContent h1 {
+    padding: 3vh 0 0 0;
+  }
+
+  .rgrInfoContainer {
+    height: auto;
+    padding: 0 0 10vh 0;
+  }
+
+  .rgrRegras {
+    width: 30%;
+  }
+
+  .rgrPergunta {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .rgrDados {
+    font-size: 24px;
+    margin: 0 5% 3% 8%;
+  }
+
+  #chefs {
+    padding: 5vh 0 7vh 0;
+    margin: -7vh 0 -7vh 0;
+  }
+
+  #chefs h1{
+    margin: 10vh 0 -5vh 0;
+  }
+
+  .cfCaixa {
+    height: 45%;
+  }
+
+  .cfNome, .cfCargo {
+    font-size: 24px;
+  }
+
+  #promocao {
+    padding: 8vh 0 0 0;
+    margin: -8vh 0 0 0;
+  }
+
+  #contato {
+    
+  }
+
+  .cttTitle {
+    padding-top: 2vh;
+  }
+
+  .fttDados {
+    margin: 0 5vh 0 0;
+  }
+
+  .ftLogo {
+    margin-top: 7vh;
+  }
+}

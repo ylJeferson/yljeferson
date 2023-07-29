@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Lobster', cursive;
+  font-size: 100%;
+  color: #fff;
+}
+
+header{
+  width: 100%;
+  height: 400px;
+  
+  text-align: center;
+  
+  border-bottom: 5px solid burlywood;
+}
+
+.banner1 h2, .banner2 h3, .banner3 h4 {
+  line-height: 400px;
+  color: transparent;
+  
+  transition: 2s;
+}
+
+.banner1, .banner2, .banner3 {
+  background-color: #1c8adb;
+}
+
+h1 {
+  width: 25%;
+  height: 100%;
+  
+  font-size: 20px;
+  line-height: 100px;
+  
+  background-image: url(../imagens/arroba.png);
+  background-color: rgb(28,138,219);
+  background-size: 200%;
+  background-position:center center;
+  background-repeat: no-repeat;
+  
+  float: left;
+}
+
+.banner1 {
+  width: 25%;
+  height: 100%;
+    
+  animation: slideb1 5s infinite;
+  animation-direction: normal;
+  
+  float: left;
+}
+
+.banner1 h2:hover {
+  color: #fff;
+  
+  background-color: rgba(0, 0, 0, .7);
+    
+  transition: 2s;
+}
+
+.banner2 {
+  width: 25%;
+  height: 100%;
+  
+  animation: slideb2 3s infinite;
+  animation-direction: reverse;
+  
+  float: left;
+}
+
+.banner2 h3:hover {
+  color: #fff;
+  
+  background-color: rgba(0, 0, 0, .7);
+    
+  transition: 2s;
+}
+
+.banner3 {
+  width: 25%;
+  height: 100%;
+  
+  animation: slideb3 1s infinite;
+  animation-direction: alternate;
+  
+  float: left;
+}
+
+.banner3 h4:hover {
+  color: #fff;
+  
+  background-color: rgba(0, 0, 0, .7);
+    
+  transition: 2s;
+}
+
+@keyframes slideb1 {
+  0%, 30% {
+    background-image: url(../imagens/msgabinete.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+  
+  35%, 65% {
+    background-image: url(../imagens/msmonitor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+  
+  70%, 100% {
+    background-image: url(../imagens/msplacamae.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+}
+
+@keyframes slideb2 {
+  0%, 30% {
+    background-image: url(../imagens/gbazul.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+  
+  35%, 65% {
+    background-image: url(../imagens/gbverde.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+  
+  70%, 100% {
+    background-image: url(../imagens/gbrosa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+}
+
+@keyframes slideb3 {
+  0%, 30% {
+    background-image: url(../imagens/ackit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+  
+  35%, 65% {
+    background-image: url(../imagens/acheadset.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+  
+  70%, 100% {
+    background-image: url(../imagens/acteclados.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  }
+}
