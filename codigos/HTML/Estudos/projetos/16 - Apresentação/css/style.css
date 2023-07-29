@@ -1,0 +1,326 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #7AC7F3;
+  color: #fff;
+  font: 100% verdana, arial, tahoma, sans-serif;
+  height: 100%;
+}
+
+nav {
+  background-color: #fff;
+  box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.5);
+  height: 2.5rem;
+  width: 100%;
+}
+
+.logo {
+  color: #444;
+  font-family: 'Fredoka One', cursive;
+}
+
+.logo li {
+  cursor: pointer;
+  font-size: 1.5625rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mnButton {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  color: #7AC7F3;
+
+  height: 6rem;
+  width: 6rem;
+
+  font-size: 1.8rem;
+  text-align: center;
+
+  bottom: -3rem; /* -3rem */
+  left: 50%;
+  margin-left: -3rem;
+  padding-bottom: 7px;
+  position: fixed;
+  z-index: 11;
+
+  cursor: pointer;
+}
+
+.mnButton p:nth-child(2){
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mnOverlay {
+  background-color: rgba(0,0,0,0.6);
+  opacity:0;
+
+  height:100%;
+  width:100%;
+
+  bottom:0;
+  left:0;
+  position:fixed;
+  right:0;
+  top:0;
+  z-index:9;
+
+  transition: all .5s;
+  pointer-events:none;
+}
+
+.mnOverlay.onOverlay {
+  pointer-events:auto;
+  opacity:1;
+}
+
+.mnWrapper {
+  overflow: hidden;
+  
+  border-radius: 50%;
+  font-size: 1rem;
+  height: 26rem;
+  width: 26rem;
+  
+  bottom: -13rem;
+  left: 50%;
+  margin-left: -13rem;
+  position: fixed;
+  z-index: 10;
+  
+  pointer-events: none;
+  
+  /* border: 1px solid #ddd; */
+  
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  transform: scale(0.1);
+  
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.mnWrapper li {
+  overflow: hidden;
+  
+  font-size: 1.5rem;
+  height: 13rem;
+  width: 13rem;
+  
+  left: 50%;
+  margin-left: -12.95rem;
+  position: absolute;
+  top: 50%;
+  
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  
+  -webkit-transition: border .5s ease;
+  -moz-transition: border .5s ease;
+  transition: border .5s ease;
+}
+
+.mnWrapper li:first-child {
+  -webkit-transform: rotate(-10deg) skew(50deg);
+  -ms-transform: rotate(-10deg) skew(50deg);
+  -moz-transform: rotate(-10deg) skew(50deg);
+  transform: rotate(-10deg) skew(50deg);
+}
+
+.mnWrapper li:nth-child(2) {
+  -webkit-transform: rotate(30deg) skew(50deg);
+  -ms-transform: rotate(30deg) skew(50deg);
+  -moz-transform: rotate(30deg) skew(50deg);
+  transform: rotate(30deg) skew(50deg);
+}
+
+.mnWrapper li:nth-child(3) {
+  -webkit-transform: rotate(70deg) skew(50deg);
+  -ms-transform: rotate(70deg) skew(50deg);
+  -moz-transform: rotate(70deg) skew(50deg);
+  transform: rotate(70deg) skew(50deg)
+}
+
+.mnWrapper li:nth-child(4) {
+  -webkit-transform: rotate(110deg) skew(50deg);
+  -ms-transform: rotate(110deg) skew(50deg);
+  -moz-transform: rotate(110deg) skew(50deg);
+  transform: rotate(110deg) skew(50deg);
+}
+
+.mnWrapper li:nth-child(5) {
+  -webkit-transform: rotate(150deg) skew(50deg);
+  -ms-transform: rotate(150deg) skew(50deg);
+  -moz-transform: rotate(150deg) skew(50deg);
+  transform: rotate(150deg) skew(50deg);
+}
+
+.mnWrapper li:nth-child(odd) a {
+  background-color: #a11313;
+  background-color: hsla(0, 88%, 63%, 1);
+}
+
+.mnWrapper li:nth-child(even) a {
+  background-color: #a61414;
+  background-color: hsla(0, 88%, 65%, 1);
+}
+
+.mnWrapper li.active a {
+  background-color: #b31515;
+  background-color: hsla(0, 88%, 70%, 1);
+}
+
+.mnWrapper li:not(.active) a:hover,
+.mnWrapper li:not(.active) a:active,
+.mnWrapper li:not(.active) a:focus {
+  background-color: #b31515;
+  background-color: hsla(0, 88%, 70%, 1);
+}
+
+.mnWrapper li a {
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  font-size: 1.18rem;
+  height: 13rem;
+  text-align: center;
+  text-decoration: none;
+  width: 13rem;
+  
+  bottom: -2.5em;
+  right: -2.5rem;
+  padding-right: 1rem;
+  padding-top: 6rem;
+  
+  -webkit-backface-visibility: hidden;
+  
+  -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -moz-transform: skew(-50deg) rotate(-70deg) scale(1);
+  transform: skew(-50deg) rotate(-70deg) scale(1);
+  
+  -webkit-transition: opacity 0.5s, color 0.5s;
+  -moz-transition: opacity 0.5s, color 0.5s;
+  transition: opacity 0.5s, color 0.5s;
+}
+
+.mnWrapper li a span {
+  font-size: 1.7rem;
+  opacity: 0.7;
+}
+
+.onMenu {
+  border-radius: 50%;
+  
+  pointer-events: auto;
+  
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.onMenuX {
+  transition: .5s;
+
+  -webkit-transform: rotate(540deg);
+  -ms-transform: rotate(540deg);
+  -moz-transform: rotate(540deg);
+  transform: rotate(540deg);
+}
+
+.onMenu2 {
+  transition: .5s;
+
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+@media (max-width: 480px) { 
+
+ }
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+/*
+@media screen and (max-width:480px) {
+  .mnWrapper {
+    font-size: .68rem;
+  }
+
+  .cn-button {
+    font-size: 1rem;
+  }
+
+  .mnWrapper li {
+    font-size: 1.52rem;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .mnWrapper {
+    width: 15.15px;
+    margin-left: -7.5rem;
+  }
+
+  .mnWrapper li {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+*/

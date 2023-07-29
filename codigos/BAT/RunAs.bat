@@ -1,0 +1,1 @@
+runas /user:Administrador /savecred "caminho"

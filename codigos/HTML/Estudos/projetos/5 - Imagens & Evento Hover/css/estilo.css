@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Times;
+}
+
+article {
+  margin: auto;
+  margin-top: 200px;
+  
+  background-image: url(../imagens/liberdade.png);
+  background-position: 0% 0%;
+  /*background-repeat: no-repeat;*/
+  
+  width: 250px;
+  height: 150px;
+  
+  transition: 1s;
+}
+
+article:hover {
+  background-position: 100% 0%;
+  transition: 1s;
+}
+
+figcaption {
+  padding: 10px;
+  text-align: center;
+}
