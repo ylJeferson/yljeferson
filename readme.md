@@ -13,11 +13,11 @@ Sou só um cara que é programador por diversão! <br>
 <img align="right" alt="'-'" height="150" src="https://user-images.githubusercontent.com/27925751/177058977-0789aa58-bed0-48e9-8091-7752adcf2ec9.png">
 </div>
 
-- 📚 Estudante autodidata de programação e entusiasta de conhecimentos instrigantes
+- 📚 Estudante autodidata de programação e entusiasta de conhecimentos intrigantes
 
 - 🎓 Técnico de Informática em [Etec Joaquim Ferreira do Amaral](http://www.etecjau.com.br/etecjau/)
 
-- 💼 Auxiliar de TI em [Kazzo Confecções e Comércio de Artigos do Vestuário LTDA](https://pt-br.facebook.com/kazzojeans/)
+- 💼 Assistente de TI em [Kazzo Confecções e Comércio de Artigos do Vestuário LTDA](https://pt-br.facebook.com/kazzojeans/)
 
 - ❤️ 
 
@@ -37,10 +37,10 @@ Sou só um cara que é programador por diversão! <br>
 
 <div align="center">
   <a href="https://github.com/yljeferson">
-    <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&custom_title=Estatisticas&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=d0d7de"/>
+    <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&custom_title=Estatisticas&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=30363d"/>
   </a>
 
   <a href="https://github.com/yljeferson">
-    <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yljeferson&layout=compact&langs_count=6&hide_title=true&card_width=293&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=d0d7de"/>
+    <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yljeferson&layout=compact&langs_count=6&hide_title=true&card_width=293&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=30363d"/>
   </a>
 </div>
