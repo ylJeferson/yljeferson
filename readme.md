@@ -37,6 +37,16 @@ Sou só um cara que é programador por diversão! <br>
 
 <div align="center">
   <a href="https://github.com/yljeferson">
+    <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&custom_title=Estatisticas&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=0000"/>
+  </a>
+
+  <a href="https://github.com/yljeferson">
+    <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yljeferson&layout=compact&langs_count=6&hide_title=true&card_width=293&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=0000"/>
+  </a>
+</div>
+<!-- 
+<div align="center">
+  <a href="https://github.com/yljeferson">
     <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api?username=yljeferson&show_icons=true&include_all_commits=true&count_private=true&custom_title=Estatisticas&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=30363d"/>
   </a>
 
@@ -44,3 +54,4 @@ Sou só um cara que é programador por diversão! <br>
     <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yljeferson&layout=compact&langs_count=6&hide_title=true&card_width=293&locale=pt-br&title_color=7957d5&text_color=539bf5&icon_color=ff3860&bg_color=0000&border_color=30363d"/>
   </a>
 </div>
+-->
