@@ -2,7 +2,7 @@
 
 ##
 
-Sou só um cara que desevolve por diversão! 
+Sempre em busca do conhecimento, desvendando os mistérios da tecnologia e transformando desafios em soluções digitais.
 <br>
 
 [![GitHub](https://img.shields.io/badge/-Git%20Hub-%23fff?logo=github&style=plastic&logoColor=black)](https://github.com/yljeferson)

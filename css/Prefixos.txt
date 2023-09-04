@@ -1,0 +1,4 @@
+-webkit-	Chrome, Safari, Versões mais recentes do Opera.
+-moz-		Firefox.
+-ms-		Internet Explorer.
+-o-		Versões antigas do Opera.

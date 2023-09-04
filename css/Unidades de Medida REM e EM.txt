@@ -1,0 +1,12 @@
+EM Utiliza o componente "PAI".
+Ex: Se colocarmos uma "UL" dentro de uma "DIV", o componente pai da "UL" será a "DIV".
+
+REM Sempre utiliza o Body como componente "PAI". Onde o valor padrão da fonte da tag "BODY" é 16px.
+
+
+
+    Target          ÷       Context        = RESULT
+----------------------------------------------------
+ Valor da fonte     ÷    Valor da fonte    = RESULT
+do qual queremos    ÷    do componente     = RESULT
+   modificar        ÷         PAI          = RESULT

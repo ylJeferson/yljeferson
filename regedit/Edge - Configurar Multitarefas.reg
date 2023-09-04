@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; PROGRAMAS ---------------------------------------------------------------------------------------
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"MultiTaskingAltTabFilter"=dword:00000003
+; Edge multi tarefas
