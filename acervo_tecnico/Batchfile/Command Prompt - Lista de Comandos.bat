@@ -1,5 +1,22 @@
 @echo off
 color 0a
+mode 48
+title Tabela 1252
+reg add "HKEY_CURRENT_USER\Console" /v "WindowPosition" /t "REG_DWORD" /d "0" /f >nul 2>&1
+
+echo ษอออออออออออออออออออออออออออออออออออออออออออออป
+echo บÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛบ
+echo บÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ INICIALIZANDO ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛบ
+echo บÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛบ
+echo ศอออออออออออออออออออออออออออออออออออออออออออออผ
+set "pasta_inicial=%~dp0"
+cd /d "%pasta_inicial%"
+
+echo ษอออออออออออออออออออออออออออออออออออออออออออออป
+echo บÛÛÛÛÛÛÛÛÛÛÛÛÛ฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿ÛÛÛÛÛÛÛÛÛÛÛÛÛบ
+echo บÛÛÛÛÛÛÛÛÛÛÛÛÛ LISTA DE COMANDOS ÛÛÛÛÛÛÛÛÛÛÛÛÛบ
+echo บÛÛÛÛÛÛÛÛÛÛÛÛÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛÛÛÛÛÛÛÛÛÛÛÛÛบ
+echo ศอออออออออออออออออออออออออออออออออออออออออออออผ
 
 echo Command 00: %~1
 echo "Utiliza os parametros colocados em atalhos pode usar de %%0 a %%9, se utilizar aspas ~ comando retorna a string sem as aspas"
@@ -264,4 +281,11 @@ echo Command 64: %__COMPAT_LAYER%
 echo "Defina o ExecutionLevel para RunAsInvoker (asInvoker), RunAsHighest (highestAvailable) ou RunAsAdmin (requireAdministrator) para mais ver elevaฦo e Q286705 / Application Compatibility Toolkit para outras Camadas de Compatibilidade (cores, temas etc)"
 echo.
 
+:fim
+echo ษอออออออออออออออออออออออออออออออออออออออออออออป
+echo บÛÛÛÛÛÛÛÛÛÛ฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿฿ÛÛÛÛÛÛÛÛÛÛบ
+echo บÛÛÛÛÛÛÛÛÛÛ JERBINHO DO WHATERZAPER ÛÛÛÛÛÛÛÛÛÛบ
+echo บÛÛÛÛÛÛÛÛÛÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛÛÛÛÛÛÛÛÛÛบ
+echo ศอออออออออออออออออออออออออออออออออออออออออออออผ
 pause
+exit
