@@ -1,0 +1,174 @@
+GUIA DE TESTES DE APROVACAO PARA PLOTTER
+
+Pasta dos arquivos:
+G:\OneDrive\.PLT
+
+Objetivo deste kit:
+Usar poucos arquivos, mas bons, para revelar os principais problemas antes de liberar a plotter para producao. Se estes testes sairem corretos, a maquina tem boa chance de trabalhar bem em producao. Se algum deles falhar, o tecnico ja sabe onde investigar.
+
+Organizacao dos nomes:
+- Arquivos que comecam com Teste_ podem ser usados em plotters pequenas e tambem em plotters grandes, desde que a area util comporte o tamanho do teste.
+- Arquivos que comecam com GRANDE_ sao testes de curso longo, largura alta ou producao pesada. Use em plotters grandes.
+
+
+ARQUIVOS DO KIT
+
+1. Teste_Angulo_Direcional_25x25cm.plt
+   Original: Quadrado 25x25 Angular direcional.plt
+   Uso: ambas.
+   Por que ficou:
+   E o melhor arquivo pequeno para ver problemas de esquadro, diagonais, folga, correia, retorno de movimento e diferenca entre direcoes.
+
+   O que este teste revela:
+   - Quadrado fora de esquadro.
+   - Diagonais diferentes.
+   - Folga mecanica em troca de direcao.
+   - Correia frouxa ou polia com jogo.
+   - Carro ou eixo respondendo diferente em ida e volta.
+
+   Como o tecnico deve se portar:
+   - Rodar primeiro com caneta ou pressao baixa.
+   - Ficar ao lado da maquina no inicio e observar inversoes de direcao.
+   - Medir os quatro lados e as duas diagonais.
+   - Se as diagonais nao baterem, nao liberar para producao.
+   - Se houver degrau no fechamento, investigar folga mecanica antes de mexer em escala.
+
+2. Teste_Escala_Quadrado_50x50cm_Com_Marcacoes.plt
+   Original: Molde_QUADRADO50.plt
+   Uso: ambas.
+   Por que ficou:
+   E o melhor teste compacto de escala e fechamento. Usa pouco material, e as marcacoes ajudam a ver se a maquina esta deslocando ou deformando.
+
+   O que este teste revela:
+   - Erro de escala em X ou Y.
+   - Linha que nao fecha.
+   - Diferenca entre lado direito/esquerdo ou frente/fundo.
+   - Offset de lamina, pressao excessiva ou corte sujo, se for usado com lamina.
+
+   Como o tecnico deve se portar:
+   - Medir exatamente 50 cm em X e Y.
+   - Conferir se as marcacoes internas continuam alinhadas.
+   - Ajustar escala somente se o erro for repetivel.
+   - Se o corte ficar tremido ou arredondado, revisar ferramenta, pressao e velocidade.
+
+3. Teste_Qualidade_Curvas_Textos_85x70cm.plt
+   Original: 001.plt
+   Uso: ambas, se a area util comportar aproximadamente 85 x 70 cm.
+   Por que ficou:
+   E o melhor teste pequeno/medio para simular um desenho mais real, com curvas, detalhes e textos. Ele pega problemas que um quadrado perfeito pode nao mostrar.
+
+   O que este teste revela:
+   - Curvas serrilhadas ou tremidas.
+   - Vibracao em velocidade alta.
+   - Falha em detalhes pequenos.
+   - Texto ou linhas finas deformadas.
+   - Problemas de suavidade de movimento.
+
+   Como o tecnico deve se portar:
+   - Rodar depois dos quadrados.
+   - Observar a suavidade das curvas e detalhes.
+   - Se os quadrados estiverem bons, mas este arquivo sair ruim, investigar velocidade, offset da lamina, suporte da ferramenta e vibracao.
+   - Nao liberar para producao se detalhes ficarem deslocados ou com falha visivel.
+
+4. Teste_Escala_1x1m_Valores_cm.plt
+   Original: Quad 1X1 Valores Cm.plt
+   Uso: ambas, desde que a plotter tenha area util para 1 x 1 m.
+   Por que ficou:
+   E o melhor teste de escala de 1 metro com marcacoes. Ele mostra erro acumulado e permite medir pontos intermediarios, nao apenas o tamanho final.
+
+   O que este teste revela:
+   - Erro de escala em 1 metro.
+   - Erro que aparece aos poucos ao longo do eixo.
+   - Diferenca entre inicio, meio e fim.
+   - Pequena patinagem ou perda de medida que nao aparece em 25 ou 50 cm.
+
+   Como o tecnico deve se portar:
+   - Medir inicio, meio e final.
+   - Comparar X e Y separadamente.
+   - Se o erro for proporcional, ajustar escala.
+   - Se o erro variar durante o caminho, investigar tracao, roletes, material ou aceleracao.
+
+5. GRANDE_Teste_Tracao_Papel_Curso_Longo_500x150cm.plt
+   Original: 2. tracao do papel em distancias maiores 500 x 150 (cm).plt
+   Uso: plotter grande.
+   Por que ficou:
+   E o melhor arquivo para descobrir problema de tracao, desalinhamento do papel e erro progressivo em curso longo. Este e um teste essencial antes de producao em plotter grande.
+
+   O que este teste revela:
+   - Papel andando torto.
+   - Roletes escorregando.
+   - Rolo pesado puxando material.
+   - Perda de esquadro em distancia longa.
+   - Erro que cresce conforme a plotter avanca.
+
+   Como o tecnico deve se portar:
+   - Alinhar a midia com cuidado antes de iniciar.
+   - Deixar folga no rolo para nao puxar contra a maquina.
+   - Marcar a lateral do material no inicio para ver se ele deriva.
+   - Acompanhar o teste inteiro ou, no minimo, inicio, meio e fim.
+   - Se a midia andar de lado, parar e corrigir carregamento/roletes antes de repetir.
+
+6. GRANDE_Teste_Molde_Curso_Longo_578x250cm.plt
+   Original: 250 X 578 Modes.plt
+   Uso: plotter grande.
+   Por que ficou:
+   E o melhor teste de estresse entre os arquivos de molde porque usa curso longo e largura alta. Ele se aproxima de uma situacao pesada de producao.
+
+   O que este teste revela:
+   - Se a plotter aguenta arquivo grande de producao.
+   - Se ha perda de alinhamento em muitas linhas.
+   - Se o buffer/comunicacao suporta trabalho longo.
+   - Se a tracao continua boa perto do limite.
+   - Se o desenho termina na posicao esperada.
+
+   Como o tecnico deve se portar:
+   - Usar somente se a plotter e a midia comportarem essa largura.
+   - Rodar com velocidade conservadora na primeira vez.
+   - Observar se o arquivo termina completo.
+   - Conferir se as partes do molde mantem alinhamento e proporcao.
+   - Se este arquivo passar bem, a plotter esta bem encaminhada para producao pesada.
+
+
+ORDEM RECOMENDADA PARA LIBERAR PRODUCAO
+
+Para plotter pequena:
+1. Teste_Angulo_Direcional_25x25cm.plt
+2. Teste_Escala_Quadrado_50x50cm_Com_Marcacoes.plt
+3. Teste_Qualidade_Curvas_Textos_85x70cm.plt, se a area util comportar.
+4. Teste_Escala_1x1m_Valores_cm.plt, se a area util comportar 1 x 1 m.
+
+Para plotter grande:
+1. Teste_Angulo_Direcional_25x25cm.plt
+2. Teste_Escala_Quadrado_50x50cm_Com_Marcacoes.plt
+3. Teste_Escala_1x1m_Valores_cm.plt
+4. GRANDE_Teste_Tracao_Papel_Curso_Longo_500x150cm.plt
+5. GRANDE_Teste_Molde_Curso_Longo_578x250cm.plt
+
+
+CRITERIO DE APROVACAO
+
+- Linhas devem fechar sem degrau visivel.
+- Quadrados devem manter lados e diagonais dentro da tolerancia do cliente.
+- Marcacoes devem permanecer alinhadas.
+- O material nao pode andar de lado durante curso longo.
+- A plotter nao pode parar, travar ou perder comunicacao.
+- Em arquivo longo, o erro nao pode crescer progressivamente.
+- Curvas e textos devem sair limpos, sem tremor forte ou deformacao.
+
+
+SE UM TESTE FALHAR
+
+- Falhou em angulo ou diagonal:
+  Verificar esquadro, correias, polias, folga e alinhamento mecanico.
+
+- Falhou em escala:
+  Verificar configuracao de unidade, passo por milimetro, calibracao de eixo e driver/software.
+
+- Falhou em curso longo:
+  Verificar tracao, roletes, alinhamento do material, rolo pesado e velocidade/aceleracao.
+
+- Falhou em curvas/textos:
+  Verificar velocidade, offset de lamina, suporte da ferramenta, pressao e vibracao.
+
+- Falhou por arquivo incompleto:
+  Verificar cabo, porta, buffer, memoria, driver e software de envio.
