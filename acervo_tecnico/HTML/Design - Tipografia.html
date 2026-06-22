@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design - Tipografia</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      height: 100svh;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 84% 76%, #19191d 0 24%, transparent 25%),
+        radial-gradient(circle at 16% 2%, #151519 0 20%, transparent 21%),
+        #050506;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+    }
+    main {
+      width: min(430px, 100vw);
+      height: min(680px, 100svh);
+      padding: clamp(18px, 4svh, 28px) 20px clamp(24px, 6svh, 42px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 clamp(42px, 9svh, 72px);
+      font-size: 27px;
+      line-height: 1;
+    }
+    h1::before {
+      content: "\2713";
+      background: #13c83e;
+      border-radius: 5px;
+      padding: 1px 5px;
+      margin-right: 8px;
+    }
+    .sample {
+      margin-bottom: clamp(42px, 8svh, 72px);
+    }
+    .sample:last-child { margin-bottom: 0; }
+    .phrase {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.12;
+      font-family: var(--sample-font);
+    }
+    .line {
+      display: block;
+      white-space: nowrap;
+    }
+    .font {
+      display: block;
+      margin-top: 9px;
+      color: #777;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .serious {
+      --sample-font: "Cinzel", Georgia, "Times New Roman", serif;
+    }
+    .serious .phrase {
+      font-size: 29px;
+      text-transform: uppercase;
+      line-height: 1.18;
+      font-weight: 700;
+    }
+    .happy {
+      --sample-font: "Arial Rounded MT Bold", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    }
+    .happy .phrase {
+      font-size: 32px;
+      text-align: center;
+      font-weight: 900;
+    }
+    .neutral {
+      --sample-font: "Satoshi", Bahnschrift, "Segoe UI", Arial, Helvetica, sans-serif;
+    }
+    .neutral .phrase {
+      font-size: 32px;
+      text-align: center;
+      font-weight: 800;
+    }
+    @media (max-width: 380px), (max-height: 610px) {
+      .phrase { font-size: 30px; }
+      .serious .phrase { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tipografia</h1>
+    <section class="sample serious">
+      <p class="phrase"><span class="line">Se eu fosse falar</span><span class="line">de forma s&eacute;ria</span></p>
+      <span class="font">Fonte: Cinzel</span>
+    </section>
+    <section class="sample happy">
+      <p class="phrase"><span class="line">Se eu fosse falar</span><span class="line">de forma alegre</span></p>
+      <span class="font">Fonte: Arial Rounded MT Bold</span>
+    </section>
+    <section class="sample neutral">
+      <p class="phrase"><span class="line">Se eu fosse falar</span><span class="line">de forma neutra</span></p>
+      <span class="font">Fonte: Satoshi</span>
+    </section>
+  </main>
+</body>
+</html>

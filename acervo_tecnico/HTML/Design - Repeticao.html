@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design - Repeti&ccedil;&atilde;o</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      height: 100svh;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 84% 48%, #1d1d21 0 22%, transparent 23%),
+        radial-gradient(circle at 30% 6%, #17171b 0 18%, transparent 19%),
+        #050506;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+    }
+    main {
+      width: min(450px, 100vw);
+      height: min(700px, 100svh);
+      padding: clamp(16px, 3svh, 28px) 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1;
+    }
+    h1::before {
+      content: "\2713";
+      background: #13c83e;
+      border-radius: 5px;
+      padding: 1px 5px;
+      margin-right: 8px;
+    }
+    .pill-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 7px;
+    }
+    .pill {
+      height: clamp(76px, 15svh, 108px);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .pill:nth-child(odd) { background: #ffc400; }
+    p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.18;
+    }
+    .closing {
+      font-size: 14px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .browser {
+      height: clamp(78px, 15svh, 107px);
+      overflow: hidden;
+      border-radius: 7px;
+      background: #fff;
+      color: #222;
+      box-shadow: 0 0 0 1px #bbb inset;
+    }
+    .bar {
+      height: 15px;
+      background: #33343a;
+      color: #ddd;
+      font-size: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    .product {
+      height: calc(100% - 15px);
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 65% 70%, #d8d8d8 0 18%, transparent 19%),
+        linear-gradient(160deg, transparent 0 56%, #f5f5f5 57%),
+        #fff;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .product small { display: block; color: #888; font-size: 7px; }
+    .wave {
+      height: clamp(82px, 15svh, 107px);
+      overflow: hidden;
+      border-radius: 10px;
+      background: #ed1b2f;
+    }
+    .wave svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    @media (max-height: 620px) {
+      main { padding-block: 12px; }
+      p { font-size: 15px; }
+      .bar { gap: 18px; }
+    }
+    @media (max-width: 360px) {
+      main { padding-inline: 18px; }
+      p { font-size: 15px; }
+      .closing { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Repeti&ccedil;&atilde;o</h1>
+    <div class="pill-row">
+      <div class="pill"></div><div class="pill"></div><div class="pill"></div>
+      <div class="pill"></div><div class="pill"></div><div class="pill"></div>
+    </div>
+    <p>A repeti&ccedil;&atilde;o refor&ccedil;a uma ideia ou percep&ccedil;&atilde;o</p>
+    <div class="browser">
+      <div class="bar"><span>Apple</span><span>Mac</span><span>iPad</span><span>iPhone</span><span>Watch</span><span>TV</span><span>Music</span></div>
+      <div class="product">iPhone 6(s)<small>3D Touch. 12MP photos. 4K video. One powerful phone.</small></div>
+    </div>
+    <p>Pode ser em formato para cabe&ccedil;alhos,<br>cores, imagens e formas id&ecirc;nticas.</p>
+    <div class="wave" aria-label="Linhas repetidas de identidade visual">
+      <svg viewBox="0 0 400 110" preserveAspectRatio="none" role="img" aria-label="Faixa branca ondulada sobre fundo vermelho">
+        <path fill="#fff" d="M-18 14 C66 50 116 66 188 67 C268 69 324 45 418 39 L418 58 C332 62 276 82 190 82 C108 82 48 65 -18 39 Z"></path>
+      </svg>
+    </div>
+    <p class="closing">Repetir &eacute; o que torna forte uma identidade visual.<br>Lembre-se daquelas "linhas" da Coca-Cola.</p>
+  </main>
+</body>
+</html>

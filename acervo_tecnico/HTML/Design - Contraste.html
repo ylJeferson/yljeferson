@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design - Contraste</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      height: 100svh;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 85% 86%, #19191d 0 28%, transparent 29%),
+        radial-gradient(circle at 18% 6%, #131317 0 20%, transparent 21%),
+        #050507;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+    }
+    main {
+      width: min(440px, 100vw);
+      height: min(560px, 100svh);
+      padding: clamp(24px, 8svh, 74px) 20px clamp(24px, 5svh, 34px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(22px, 6svh, 42px);
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 clamp(12px, 4svh, 28px);
+      font-size: 26px;
+      line-height: 1;
+    }
+    h1::before {
+      content: "\2713";
+      background: #13c83e;
+      border-radius: 5px;
+      padding: 1px 5px;
+      margin-right: 8px;
+    }
+    .card {
+      min-height: clamp(86px, 20svh, 108px);
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      font-size: 40px;
+      line-height: 1;
+    }
+    .good {
+      background: #ffc400;
+      color: #1b1d25;
+    }
+    .bad {
+      background: #00f624;
+      color: #fff04c;
+    }
+    @media (max-width: 380px) {
+      .card { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Contraste</h1>
+    <div class="card good">Bom contraste</div>
+    <div class="card bad">PQP KKKKKKKK</div>
+  </main>
+</body>
+</html>

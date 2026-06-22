@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design - Cores</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      height: 100svh;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 80% 0, #1b1b20 0 20%, transparent 21%),
+        radial-gradient(circle at 16% 12%, #111116 0 18%, transparent 19%),
+        #050506;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+    }
+    main {
+      width: min(395px, 100vw);
+      height: min(620px, 100svh);
+      padding: clamp(14px, 3svh, 24px) 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 clamp(18px, 4svh, 34px);
+      font-size: 29px;
+      line-height: 1;
+    }
+    h1::before {
+      content: "\2713";
+      background: #13c83e;
+      border-radius: 5px;
+      padding: 1px 5px;
+      margin-right: 8px;
+    }
+    .swatch {
+      height: clamp(42px, 8svh, 58px);
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      margin-bottom: clamp(5px, 1svh, 8px);
+      font-size: 29px;
+      line-height: 1;
+    }
+    .swatch:last-child { margin-bottom: 0; }
+    .yellow { background: #ffc400; color: #151821; }
+    .orange { background: #ff7d45; }
+    .red { background: #ff0f45; }
+    .purple { background: #c36ad7; }
+    .blue { background: #128bd6; }
+    .green { background: #8dc643; }
+    .gray { background: #d6d3d6; color: #171923; }
+    .split {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      background: #020203;
+    }
+    .split span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+    .split .left {
+      left: 0;
+      width: 50%;
+      justify-content: flex-end;
+      padding-right: 4px;
+      color: #fff;
+    }
+    .split .right {
+      left: 50%;
+      right: 0;
+      justify-content: flex-start;
+      padding-left: 4px;
+      background: #f7f7f7;
+      color: #151821;
+      border-radius: 8px;
+    }
+    @media (max-width: 360px) {
+      .swatch { font-size: 25px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Cores</h1>
+    <div class="swatch yellow">Otimismo</div>
+    <div class="swatch orange">Amig&aacute;vel</div>
+    <div class="swatch red">Excitante</div>
+    <div class="swatch purple">Criativo/m&iacute;stico</div>
+    <div class="swatch blue">Confi&aacute;vel</div>
+    <div class="swatch green">Pac&iacute;fico</div>
+    <div class="swatch gray">Balanceado</div>
+    <div class="swatch split"><span class="left">Sofist</span><span class="right">icado</span></div>
+  </main>
+</body>
+</html>
