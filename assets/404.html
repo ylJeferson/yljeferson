@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404</title>
+    <style>
+      :root {
+        --sky-top: #82c9ff;
+        --sky-bottom: #fff1b7;
+        --orb: #ffd15f;
+        --orb-glow: rgba(255, 209, 95, 0.36);
+        --text: #17202a;
+        --star: rgba(255, 255, 255, 0);
+        --cloud-opacity: 0.42;
+        --eclipse-opacity: 0;
+        font-family: "Comic Sans MS", "Trebuchet MS", Arial, Helvetica, cursive, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        background: linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+        color: var(--text);
+        transition: background 400ms linear, color 400ms linear;
+      }
+
+      main {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        padding: 48px 24px;
+      }
+
+      .orb {
+        position: absolute;
+        left: var(--orb-x, 50%);
+        top: var(--orb-y, 18%);
+        width: clamp(86px, 12vw, 150px);
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.72), transparent 0 17%, rgba(255, 255, 255, 0.14) 18% 25%, transparent 26%),
+          var(--orb);
+        box-shadow: 0 0 0 34px var(--orb-glow), 0 0 110px 46px var(--orb-glow);
+        transition: background 400ms linear, box-shadow 400ms linear;
+      }
+
+      body.night .orb::before,
+      body.night .orb::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(177, 177, 163, 0.35);
+      }
+
+      body.lunar-eclipse .orb {
+        background:
+          radial-gradient(circle at 34% 32%, rgba(255, 215, 160, 0.28), transparent 0 18%, rgba(80, 0, 0, 0.18) 19% 28%, transparent 29%),
+          #b83b32;
+        box-shadow: 0 0 0 34px rgba(184, 59, 50, 0.18), 0 0 120px 48px rgba(184, 59, 50, 0.25);
+      }
+
+      .eclipse-cover {
+        position: absolute;
+        left: var(--orb-x, 50%);
+        top: var(--orb-y, 18%);
+        width: clamp(86px, 12vw, 150px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #060606;
+        box-shadow: 0 0 32px 8px rgba(0, 0, 0, 0.72);
+        opacity: var(--eclipse-opacity);
+        pointer-events: none;
+        transform: translate(calc(-50% + var(--eclipse-shift, 0px)), -50%);
+        transition: opacity 400ms linear, transform 400ms linear;
+      }
+
+      body.night .orb::before {
+        left: 28%;
+        top: 36%;
+        width: 22%;
+        height: 22%;
+      }
+
+      body.night .orb::after {
+        right: 22%;
+        top: 24%;
+        width: 14%;
+        height: 14%;
+      }
+
+      .stars {
+        position: absolute;
+        inset: 0;
+        opacity: 1;
+        background-image:
+          radial-gradient(circle at 6% 16%, var(--star) 0 2px, transparent 3px),
+          radial-gradient(circle at 14% 62%, var(--star) 0 1px, transparent 2px),
+          radial-gradient(circle at 23% 29%, var(--star) 0 2px, transparent 3px),
+          radial-gradient(circle at 34% 74%, var(--star) 0 1px, transparent 2px),
+          radial-gradient(circle at 48% 18%, var(--star) 0 2px, transparent 3px),
+          radial-gradient(circle at 61% 68%, var(--star) 0 1px, transparent 2px),
+          radial-gradient(circle at 73% 22%, var(--star) 0 2px, transparent 3px),
+          radial-gradient(circle at 84% 58%, var(--star) 0 1px, transparent 2px),
+          radial-gradient(circle at 96% 34%, var(--star) 0 2px, transparent 3px);
+        background-size: 100% 100%;
+        animation: twinkle 3.6s ease-in-out infinite;
+      }
+
+      .cloud {
+        position: absolute;
+        width: 180px;
+        height: 50px;
+        border-radius: 99px;
+        background: rgba(255, 255, 255, 0.42);
+        filter: blur(1px);
+        opacity: var(--cloud-opacity);
+        animation: drift 22s linear infinite;
+      }
+
+      .cloud::before,
+      .cloud::after {
+        content: "";
+        position: absolute;
+        bottom: 12px;
+        border-radius: 50%;
+        background: inherit;
+      }
+
+      .cloud::before {
+        left: 22px;
+        width: 72px;
+        height: 72px;
+      }
+
+      .cloud::after {
+        right: 24px;
+        width: 92px;
+        height: 92px;
+      }
+
+      .cloud.one {
+        left: 6%;
+        top: 68%;
+      }
+
+      .cloud.two {
+        right: 8%;
+        top: 28%;
+        transform: scale(0.78);
+        animation-duration: 28s;
+        animation-delay: -8s;
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        place-items: center;
+        text-align: center;
+      }
+
+      .copy {
+        transform: translateY(-5vh);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(84px, 18vw, 190px);
+        font-weight: 900;
+        line-height: 0.88;
+        letter-spacing: 0;
+        text-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      p {
+        max-width: 420px;
+        margin: 18px auto 0;
+        font-size: clamp(17px, 2.2vw, 24px);
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.72;
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes drift {
+        0%,
+        100% {
+          translate: -12px 0;
+        }
+
+        50% {
+          translate: 22px 0;
+        }
+      }
+
+      @media (max-width: 520px) {
+        main {
+          padding: 32px 18px;
+        }
+
+        .orb {
+          width: clamp(84px, 28vw, 118px);
+        }
+
+        .eclipse-cover {
+          width: clamp(84px, 28vw, 118px);
+        }
+
+        .cloud {
+          width: 142px;
+          height: 40px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <main aria-label="P&aacute;gina n&atilde;o encontrada">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
+      <div class="eclipse-cover" aria-hidden="true"></div>
+      <div class="cloud one" aria-hidden="true"></div>
+      <div class="cloud two" aria-hidden="true"></div>
+      <section class="content">
+        <div class="copy">
+          <h1>404</h1>
+          <p>P&aacute;gina n&atilde;o encontrada</p>
+        </div>
+      </section>
+    </main>
+    <script>
+      const colorStops = [
+        { hour: 0, top: [17, 29, 53], bottom: [38, 57, 84], text: [255, 255, 255], star: 0.62, cloud: 0.12 },
+        { hour: 5, top: [28, 39, 75], bottom: [111, 90, 124], text: [255, 255, 255], star: 0.42, cloud: 0.2 },
+        { hour: 6.6, top: [255, 176, 132], bottom: [255, 226, 167], text: [36, 31, 43], star: 0.12, cloud: 0.36 },
+        { hour: 8, top: [130, 201, 255], bottom: [255, 241, 183], text: [23, 32, 42], star: 0, cloud: 0.42 },
+        { hour: 16.3, top: [130, 201, 255], bottom: [255, 241, 183], text: [23, 32, 42], star: 0, cloud: 0.42 },
+        { hour: 18, top: [255, 142, 104], bottom: [92, 88, 131], text: [255, 247, 224], star: 0.28, cloud: 0.28 },
+        { hour: 19.4, top: [35, 45, 82], bottom: [30, 45, 72], text: [255, 255, 255], star: 0.55, cloud: 0.16 },
+        { hour: 24, top: [17, 29, 53], bottom: [38, 57, 84], text: [255, 255, 255], star: 0.62, cloud: 0.12 }
+      ];
+
+      const eclipseEvents = [
+        { type: "solar", iso: "2026-08-12T17:47:05Z", windowHours: 5 },
+        { type: "lunar", iso: "2026-08-28T04:14:04Z", windowHours: 4 },
+        { type: "solar", iso: "2027-02-06T16:00:47Z", windowHours: 5 },
+        { type: "solar", iso: "2027-08-02T10:07:49Z", windowHours: 5 },
+        { type: "lunar", iso: "2028-01-12T04:14:13Z", windowHours: 4 },
+        { type: "solar", iso: "2028-01-26T15:08:58Z", windowHours: 5 },
+        { type: "lunar", iso: "2028-07-06T18:20:57Z", windowHours: 4 },
+        { type: "solar", iso: "2028-07-22T02:56:39Z", windowHours: 5 },
+        { type: "lunar", iso: "2028-12-31T16:53:15Z", windowHours: 4 }
+      ];
+
+      function mixChannel(a, b, amount) {
+        return Math.round(a + (b - a) * amount);
+      }
+
+      function mixColor(a, b, amount) {
+        return a.map((value, index) => mixChannel(value, b[index], amount));
+      }
+
+      function toRgb(color) {
+        return `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+      }
+
+      function paletteForHour(hour) {
+        const current = colorStops.find((stop, index) => hour >= stop.hour && hour <= colorStops[index + 1]?.hour) || colorStops[0];
+        const next = colorStops[colorStops.indexOf(current) + 1] || colorStops[0];
+        const span = next.hour - current.hour || 1;
+        const amount = Math.min(1, Math.max(0, (hour - current.hour) / span));
+
+        return {
+          top: mixColor(current.top, next.top, amount),
+          bottom: mixColor(current.bottom, next.bottom, amount),
+          text: mixColor(current.text, next.text, amount),
+          star: current.star + (next.star - current.star) * amount,
+          cloud: current.cloud + (next.cloud - current.cloud) * amount
+        };
+      }
+
+      function activeEclipse(now, params) {
+        const previewEvent = params.get("event");
+
+        if (previewEvent === "solar") {
+          return { type: "solar", strength: 1 };
+        }
+
+        if (previewEvent === "lunar") {
+          return { type: "lunar", strength: 1 };
+        }
+
+        return eclipseEvents
+          .map((event) => {
+            const center = new Date(event.iso).getTime();
+            const distance = Math.abs(now.getTime() - center);
+            const windowMs = event.windowHours * 60 * 60 * 1000;
+            return { type: event.type, strength: Math.max(0, 1 - distance / windowMs) };
+          })
+          .find((event) => event.strength > 0);
+      }
+
+      function updateSky() {
+        const now = new Date();
+        const params = new URLSearchParams(window.location.search);
+        const previewHour = Number(params.get("hour"));
+        const requestedGmt = Number(params.get("gmt"));
+        const hasHour = params.has("hour") && Number.isFinite(previewHour) && previewHour >= 0 && previewHour < 24;
+        const hasGmt = params.has("gmt") && Number.isFinite(requestedGmt) && requestedGmt >= -12 && requestedGmt <= 14;
+        const localOffsetMinutes = -now.getTimezoneOffset();
+        const offsetMinutes = hasGmt ? requestedGmt * 60 : localOffsetMinutes;
+        const utcMinutes = now.getUTCHours() * 60 + now.getUTCMinutes() + (now.getUTCSeconds() + now.getUTCMilliseconds() / 1000) / 60;
+        const targetMinutes = (utcMinutes + offsetMinutes + 1440) % 1440;
+        const realHour = targetMinutes / 60;
+        const hour = hasHour ? previewHour : realHour;
+        const isDay = hour >= 6 && hour < 18;
+        const progress = isDay ? (hour - 6) / 12 : (hour >= 18 ? hour - 18 : hour + 6) / 12;
+        const x = 9 + progress * 82;
+        const y = 72 - Math.sin(Math.PI * progress) * 56;
+        const palette = paletteForHour(hour);
+        const event = activeEclipse(now, params);
+
+        document.body.classList.toggle("night", !isDay);
+        document.body.classList.toggle("solar-eclipse", event?.type === "solar");
+        document.body.classList.toggle("lunar-eclipse", event?.type === "lunar");
+        document.documentElement.style.setProperty("--orb-x", `${x}%`);
+        document.documentElement.style.setProperty("--orb-y", `${y}%`);
+        document.documentElement.style.setProperty("--sky-top", toRgb(palette.top));
+        document.documentElement.style.setProperty("--sky-bottom", toRgb(palette.bottom));
+        document.documentElement.style.setProperty("--text", toRgb(palette.text));
+        document.documentElement.style.setProperty("--star", `rgba(255, 255, 255, ${palette.star})`);
+        document.documentElement.style.setProperty("--cloud-opacity", palette.cloud.toFixed(3));
+        document.documentElement.style.setProperty("--orb", isDay ? "#ffd15f" : "#f8f4d8");
+        document.documentElement.style.setProperty("--orb-glow", isDay ? "rgba(255, 209, 95, 0.36)" : "rgba(248, 244, 216, 0.22)");
+        document.documentElement.style.setProperty("--eclipse-opacity", event?.type === "solar" ? event.strength.toFixed(3) : "0");
+        document.documentElement.style.setProperty("--eclipse-shift", event?.type === "solar" ? `${(1 - event.strength) * 46}px` : "0px");
+        requestAnimationFrame(updateSky);
+      }
+
+      updateSky();
+    </script>
+  </body>
+</html>
