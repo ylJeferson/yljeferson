@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404</title>
+    <style>
+      :root {
+        --green: #00ff7b;
+        --deep: #020503;
+        --subtitle-bg-opacity: 1;
+        font-family: "Courier New", Consolas, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        background: var(--deep);
+        color: var(--green);
+      }
+
+      canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      main {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        place-items: center;
+        padding: 24px;
+        opacity: 0;
+        animation: reveal 900ms ease 2600ms forwards;
+      }
+
+      .terminal {
+        position: relative;
+        display: grid;
+        width: min(780px, 100%);
+        max-width: 100vw;
+        overflow: hidden;
+        padding: 32px 24px;
+        place-items: center;
+        text-align: center;
+      }
+
+      .glitch {
+        position: relative;
+        font-size: clamp(92px, 24vw, 250px);
+        font-weight: 900;
+        line-height: 0.82;
+        letter-spacing: 0;
+        text-shadow: 0 0 18px rgba(0, 255, 123, 0.92);
+        animation: glitchPulse 6.8s steps(1, end) infinite;
+      }
+
+      .glitch::before,
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .glitch::before {
+        left: 5px;
+        color: #98ffd1;
+        text-shadow: -3px 0 #00ff7b;
+        clip-path: inset(0 0 55% 0);
+        opacity: 0;
+        animation: glitchTop 6.8s steps(1, end) infinite;
+      }
+
+      .glitch::after {
+        left: -5px;
+        color: #073d21;
+        text-shadow: 4px 0 #00ff7b;
+        clip-path: inset(52% 0 0 0);
+        opacity: 0;
+        animation: glitchBottom 6.8s steps(1, end) infinite;
+      }
+
+      .scanline {
+        position: fixed;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.05) 0,
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+        mix-blend-mode: screen;
+        opacity: 0.28;
+      }
+
+      .subtitle {
+        position: relative;
+        z-index: 2;
+        margin-top: 22px;
+        padding: 10px 18px;
+        border: 1px solid rgba(0, 255, 123, 0.62);
+        background: rgba(0, 10, 4, var(--subtitle-bg-opacity));
+        box-shadow: 0 0 22px rgba(0, 255, 123, 0.24), inset 0 0 16px rgba(0, 255, 123, 0.1);
+        font-size: clamp(15px, 2vw, 22px);
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .artifact {
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        z-index: 1;
+        width: var(--w);
+        height: 10px;
+        background: linear-gradient(90deg, transparent, rgba(0, 255, 123, 0.82), rgba(220, 255, 238, 0.92), transparent);
+        box-shadow: 0 0 18px rgba(0, 255, 123, 0.72);
+        opacity: 0;
+        transform: translateX(0);
+        animation: artifactFlash 6.8s steps(1, end) infinite;
+        animation-delay: var(--delay);
+      }
+
+      @keyframes reveal {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes glitchPulse {
+        0%,
+        72%,
+        76%,
+        100% {
+          filter: brightness(1);
+        }
+
+        73% {
+          filter: brightness(1.6);
+        }
+
+        74% {
+          filter: brightness(0.7);
+        }
+      }
+
+      @keyframes glitchTop {
+        0%,
+        62%,
+        66%,
+        100% {
+          opacity: 0;
+          transform: translate(0, 0);
+        }
+
+        63% {
+          opacity: 1;
+          transform: translate(-18px, -6px);
+        }
+
+        64% {
+          opacity: 1;
+          transform: translate(12px, 4px);
+        }
+
+        65% {
+          opacity: 0.75;
+          transform: translate(-6px, 0);
+        }
+      }
+
+      @keyframes glitchBottom {
+        0%,
+        28%,
+        33%,
+        100% {
+          opacity: 0;
+          transform: translate(0, 0);
+        }
+
+        29% {
+          opacity: 1;
+          transform: translate(16px, 6px);
+        }
+
+        30% {
+          opacity: 1;
+          transform: translate(-12px, -3px);
+        }
+
+        32% {
+          opacity: 0.8;
+          transform: translate(7px, 2px);
+        }
+      }
+
+      @keyframes artifactFlash {
+        0%,
+        54%,
+        58%,
+        100% {
+          opacity: 0;
+          transform: translateX(0);
+        }
+
+        55% {
+          opacity: 1;
+          transform: translateX(-18px);
+        }
+
+        56% {
+          opacity: 0.42;
+          transform: translateX(24px);
+        }
+
+        57% {
+          opacity: 0.86;
+          transform: translateX(-7px);
+        }
+      }
+
+      @media (max-width: 520px) {
+        main {
+          padding: 18px;
+        }
+
+        .subtitle {
+          max-width: min(330px, 88vw);
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="matrix" aria-hidden="true"></canvas>
+    <main aria-label="P&aacute;gina n&atilde;o encontrada">
+      <section class="terminal">
+        <div class="glitch" data-text="404">404</div>
+        <div class="subtitle">P&aacute;gina n&atilde;o encontrada</div>
+        <span class="artifact" style="--x: 12%; --y: 28%; --w: 145px; --delay: -0.2s;"></span>
+        <span class="artifact" style="--x: 58%; --y: 38%; --w: 210px; --delay: -2.1s;"></span>
+        <span class="artifact" style="--x: 22%; --y: 61%; --w: 180px; --delay: -4.3s;"></span>
+        <span class="artifact" style="--x: 66%; --y: 69%; --w: 120px; --delay: -5.4s;"></span>
+      </section>
+    </main>
+    <div class="scanline" aria-hidden="true"></div>
+    <script>
+      const canvas = document.querySelector("#matrix");
+      const context = canvas.getContext("2d");
+      const characters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&/<>[]{}";
+      let width = 0;
+      let height = 0;
+      let columns = [];
+      let frame = 0;
+
+      function resize() {
+        const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * pixelRatio);
+        canvas.height = Math.floor(height * pixelRatio);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+        columns = Array.from({ length: Math.ceil(width / 18) }, () => ({
+          y: Math.random() * -height,
+          speed: 7 + Math.random() * 14,
+          trail: 8 + Math.floor(Math.random() * 18)
+        }));
+      }
+
+      function draw() {
+        frame += 1;
+        context.fillStyle = "rgba(0, 0, 0, 0.18)";
+        context.fillRect(0, 0, width, height);
+        context.font = "18px Courier New, monospace";
+
+        columns.forEach((column, index) => {
+          const x = index * 18;
+
+          for (let i = 0; i < column.trail; i += 1) {
+            const y = column.y - i * 18;
+            if (y < -20 || y > height + 20) {
+              continue;
+            }
+
+            const charIndex = Math.floor(Math.random() * characters.length);
+            const alpha = Math.max(0, 1 - i / column.trail);
+            context.fillStyle = i === 0
+              ? "rgba(210, 255, 232, 0.96)"
+              : `rgba(0, 255, 123, ${alpha * 0.72})`;
+            context.fillText(characters[charIndex], x, y);
+          }
+
+          column.y += column.speed;
+
+          if (column.y - column.trail * 18 > height) {
+            column.y = Math.random() * -240;
+            column.speed = 7 + Math.random() * 14;
+          }
+        });
+
+        if (frame < 170) {
+          requestAnimationFrame(draw);
+          return;
+        }
+
+        context.fillStyle = "rgba(0, 0, 0, 0.08)";
+        context.fillRect(0, 0, width, height);
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      draw();
+      window.addEventListener("resize", resize);
+    </script>
+  </body>
+</html>

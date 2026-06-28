@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404</title>
+    <style>
+      :root {
+        --bg: #242424;
+        --line: rgba(248, 239, 229, 0.28);
+        --cream: #f1e3d8;
+        --ink: #272727;
+        --accent: #19d7b1;
+        --lime: #b9ff1c;
+        font-family: "Courier New", Consolas, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        background:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px),
+          var(--bg);
+        background-size: 90px 90px;
+        color: var(--cream);
+      }
+
+      main {
+        position: relative;
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        place-items: center;
+        padding: clamp(16px, 4vw, 32px);
+      }
+
+      .desk {
+        position: relative;
+        width: min(860px, 92vw);
+        height: min(500px, 74vh);
+      }
+
+      .monitor {
+        position: absolute;
+        left: 50%;
+        top: 44%;
+        z-index: 3;
+        width: min(500px, 72vw);
+        transform: translate(-50%, -50%);
+        border: 18px solid #1f1f1f;
+        border-radius: 14px;
+        background: #1f1f1f;
+        box-shadow: 0 28px 0 -13px #6e6964, 0 84px 0 -56px #d7c8bd;
+      }
+
+      .screen {
+        position: relative;
+        display: grid;
+        min-height: 286px;
+        grid-template-rows: auto auto;
+        align-content: center;
+        row-gap: 10px;
+        padding: 34px 28px 38px;
+        place-items: center;
+        border: 3px solid rgba(39, 39, 39, 0.22);
+        border-radius: 4px;
+        background: var(--cream);
+        color: var(--ink);
+      }
+
+      .digits {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: clamp(74px, 13vw, 126px);
+        font-weight: 900;
+        line-height: 0.78;
+        letter-spacing: 0;
+        image-rendering: pixelated;
+        text-shadow:
+          5px 0 0 #1f1f1f,
+          0 5px 0 #1f1f1f,
+          5px 5px 0 #1f1f1f;
+      }
+
+      .message {
+        margin-top: 0;
+        font-size: clamp(18px, 2.4vw, 29px);
+        font-weight: 900;
+        letter-spacing: 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .power {
+        position: absolute;
+        right: 1px;
+        bottom: -16px;
+        width: 9px;
+        height: 9px;
+        border: 2px solid #d8cbc0;
+        border-radius: 50%;
+        background: #1f1f1f;
+      }
+
+      .stand {
+        position: absolute;
+        left: 50%;
+        top: calc(44% + 168px);
+        z-index: 2;
+        width: 250px;
+        height: 72px;
+        transform: translateX(-50%);
+        background: linear-gradient(174deg, #6e6964 0 48%, #efe2d8 49%);
+        clip-path: polygon(20% 0, 80% 0, 86% 100%, 14% 100%);
+      }
+
+      .base {
+        position: absolute;
+        left: 50%;
+        top: calc(44% + 236px);
+        z-index: 2;
+        width: 260px;
+        height: 18px;
+        transform: translateX(-50%);
+        border: 3px solid #8a8179;
+        background: var(--cream);
+      }
+
+      .plant {
+        position: absolute;
+        left: 9%;
+        bottom: 8%;
+        z-index: 4;
+        width: 112px;
+        height: 176px;
+      }
+
+      .vase {
+        position: absolute;
+        left: 34px;
+        bottom: 0;
+        width: 58px;
+        height: 64px;
+        border: 3px solid #817a73;
+        border-top: 0;
+        background: var(--cream);
+        clip-path: polygon(10% 0, 90% 0, 76% 100%, 24% 100%);
+      }
+
+      .stem {
+        position: absolute;
+        bottom: 56px;
+        width: 5px;
+        border-radius: 4px;
+        background: var(--accent);
+        transform-origin: bottom;
+        animation: sway 4s ease-in-out infinite;
+      }
+
+      .stem:nth-child(1) {
+        left: 50px;
+        height: 74px;
+        transform: rotate(-15deg);
+        animation-delay: -1s;
+      }
+
+      .stem:nth-child(2) {
+        left: 63px;
+        height: 98px;
+        animation-delay: -1.8s;
+      }
+
+      .stem:nth-child(3) {
+        left: 76px;
+        height: 78px;
+        transform: rotate(16deg);
+        animation-delay: -0.4s;
+      }
+
+      .leaf {
+        position: absolute;
+        width: 30px;
+        height: 18px;
+        border-radius: 50%;
+        background: #19d7b1;
+        transform-origin: center left;
+      }
+
+      .leaf.left {
+        left: -28px;
+        top: 22px;
+        transform: rotate(-28deg);
+      }
+
+      .leaf.right {
+        right: -28px;
+        top: 42px;
+        transform: rotate(28deg);
+      }
+
+      .leaf.top {
+        left: -12px;
+        top: -10px;
+        transform: rotate(-72deg);
+      }
+
+      .mouse {
+        position: absolute;
+        right: 8%;
+        bottom: 9%;
+        z-index: 1;
+        width: 94px;
+        height: 62px;
+      }
+
+      .mouse::before {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 auto;
+        bottom: 0;
+        width: 86px;
+        height: 56px;
+        border: 3px solid #817a73;
+        border-radius: 46px 46px 22px 22px;
+        background: var(--cream);
+      }
+
+      .mouse::after {
+        content: "";
+        position: absolute;
+        left: 48px;
+        top: 8px;
+        width: 3px;
+        height: 18px;
+        border-radius: 3px;
+        background: #817a73;
+      }
+
+      .cursor {
+        position: absolute;
+        right: 6%;
+        top: 33%;
+        z-index: 5;
+        width: 42px;
+        height: 52px;
+        transform: rotate(-45deg);
+        animation: cursorMove 5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        filter: drop-shadow(0 0 5px rgba(66, 164, 255, 0.85));
+      }
+
+      .warning {
+        position: absolute;
+        left: 0;
+        top: 7%;
+        width: 98px;
+        height: 86px;
+        overflow: visible;
+      }
+
+      @keyframes sway {
+        0%,
+        100% {
+          rotate: -4deg;
+        }
+
+        50% {
+          rotate: 5deg;
+        }
+      }
+
+      @keyframes cursorMove {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(-45deg);
+        }
+
+        35% {
+          transform: translate(-64px, 42px) rotate(-48deg);
+        }
+
+        64% {
+          transform: translate(-18px, 96px) rotate(-42deg);
+        }
+      }
+
+      @media (max-width: 720px) {
+        .desk {
+          width: min(390px, 94vw);
+          height: 100%;
+        }
+
+        .monitor {
+          top: 38%;
+          width: 86vw;
+        }
+
+        .screen {
+          min-height: 270px;
+          padding-inline: 18px;
+        }
+
+        .stand,
+        .base {
+          top: auto;
+          bottom: 154px;
+        }
+
+        .plant {
+          left: 4%;
+          bottom: 12%;
+          scale: 0.82;
+        }
+
+        .warning,
+        .cursor {
+          display: none;
+        }
+
+        .mouse {
+          right: 2%;
+          bottom: 13%;
+          scale: 0.78;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main aria-label="P&aacute;gina n&atilde;o encontrada">
+      <section class="desk">
+        <svg class="warning" viewBox="0 0 98 86" aria-hidden="true">
+          <path d="M49 3 L96 83 H2 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+          <path d="M49 28 V56" stroke="currentColor" stroke-width="6" stroke-linecap="round"></path>
+          <circle cx="49" cy="68" r="3" fill="currentColor"></circle>
+        </svg>
+        <svg class="cursor" viewBox="0 0 256 256" aria-hidden="true">
+          <path d="M213.215 183.553L213.207 183.535L213.199 183.517L153.839 49.8443C151.094 43.3979 148.045 37.8202 144.608 33.5834C141.248 29.4418 136.739 25.6365 130.928 24.7076C124.678 23.7084 119.264 26.3662 115.138 30.3006C111.15 34.1019 107.754 39.5954 104.744 46.2014L43.8283 179.868L43.8027 179.924L43.7778 179.981C40.4428 187.591 41.0921 197.756 43.6496 205.571C44.9803 209.638 47.0565 213.818 50.1085 217.139C53.2285 220.533 57.7537 223.383 63.5155 223.405C68.2158 223.423 73.4002 221.504 77.7068 219.725C80.1809 218.703 83.1498 217.372 86.1911 216.008C88.5035 214.971 90.8577 213.915 93.068 212.962C104.227 208.152 116.224 203.909 128.088 203.954C139.993 204 152.107 208.272 163.262 213.104C166.013 214.295 168.645 215.492 171.195 216.652L171.204 216.656L171.228 216.667C173.741 217.81 176.212 218.934 178.51 219.914C182.714 221.706 187.763 223.68 192.242 223.82C203.005 224.157 209.576 215.19 212.443 208.371C215.486 201.134 216.668 191.425 213.215 183.553Z" fill="#05090f" stroke="#f4fbff" stroke-width="17" stroke-linejoin="round"></path>
+        </svg>
+        <div class="monitor">
+          <div class="screen">
+            <div class="digits" aria-hidden="true">404</div>
+            <div class="message">P&aacute;gina n&atilde;o encontrada</div>
+            <div class="power" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="stand" aria-hidden="true"></div>
+        <div class="base" aria-hidden="true"></div>
+        <div class="plant" aria-hidden="true">
+          <div class="stem"><span class="leaf left"></span><span class="leaf top"></span></div>
+          <div class="stem"><span class="leaf right"></span><span class="leaf top"></span></div>
+          <div class="stem"><span class="leaf left"></span><span class="leaf right"></span></div>
+          <div class="vase"></div>
+        </div>
+        <div class="mouse" aria-hidden="true"></div>
+      </section>
+    </main>
+  </body>
+</html>
