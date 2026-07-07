@@ -35,6 +35,15 @@ Sempre em busca do conhecimento, desvendando os mistérios da tecnologia e trans
   </a>
 </div>
 
+## Diretrizes do projeto
+
+- Seja extremamente conciso e foque apenas na resolução do problema.
+- Responda diretamente com o código, comando ou solução necessária.
+- Evite rodeios, saudações formais e explicações longas, salvo quando solicitadas.
+- O arquivo `readme.md` deve ser nomeado totalmente em letras minúsculas.
+- O `readme.md` deve documentar a estrutura do projeto, seu funcionamento e todas as diretrizes aplicáveis.
+- Toda nova diretriz definida durante a conversa deve ser registrada no `readme.md` antes de qualquer implementação relacionada.
+
 <!-- Área de comentários -----------------------------------------
   
   &border_color=30363d - Dark Mode
