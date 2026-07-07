@@ -43,6 +43,7 @@ Sempre em busca do conhecimento, desvendando os mistérios da tecnologia e trans
 - O arquivo `readme.md` deve ser nomeado totalmente em letras minúsculas.
 - O `readme.md` deve documentar a estrutura do projeto, seu funcionamento e todas as diretrizes aplicáveis.
 - Toda nova diretriz definida durante a conversa deve ser registrada no `readme.md` antes de qualquer implementação relacionada.
+- As mensagens de commit devem seguir o padrão `-m "[Tipo da Alteração] - [Breve resumo referente à alteração realizada]"`, usando o tipo da alteração com a palavra do verbo em forma de derivação, como `Adição`, `Correção`, `Modificação`, `Exclusão`, `Ajuste`, entre outros.
 
 <!-- Área de comentários -----------------------------------------
   

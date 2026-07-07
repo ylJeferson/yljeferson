@@ -54,6 +54,7 @@
         aspect-ratio: 1;
         transform: translate(-50%, -50%);
         border-radius: 50%;
+        overflow: hidden;
         background:
           radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.72), transparent 0 17%, rgba(255, 255, 255, 0.14) 18% 25%, transparent 26%),
           var(--orb);
@@ -65,8 +66,24 @@
       body.night .orb::after {
         content: "";
         position: absolute;
+        inset: 0;
         border-radius: 50%;
-        background: rgba(177, 177, 163, 0.35);
+        pointer-events: none;
+      }
+
+      body.night .orb::before {
+        background: var(--moon-phase-mask, rgba(13, 23, 42, 0.88));
+        opacity: var(--moon-phase-opacity, 0);
+        transform: translateX(var(--moon-phase-x, 0));
+        transition: opacity 400ms linear, transform 400ms linear, background 400ms linear;
+      }
+
+      body.night .orb::after {
+        background:
+          radial-gradient(circle at 31% 39%, rgba(177, 177, 163, 0.36) 0 7%, transparent 8%),
+          radial-gradient(circle at 63% 29%, rgba(177, 177, 163, 0.28) 0 5%, transparent 6%),
+          radial-gradient(circle at 55% 67%, rgba(177, 177, 163, 0.2) 0 4%, transparent 5%);
+        opacity: 0.72;
       }
 
       body.lunar-eclipse .orb {
@@ -91,18 +108,12 @@
         transition: opacity 400ms linear, transform 400ms linear;
       }
 
-      body.night .orb::before {
-        left: 28%;
-        top: 36%;
-        width: 22%;
-        height: 22%;
+      body.lunar-eclipse .orb::before {
+        opacity: 0;
       }
 
-      body.night .orb::after {
-        right: 22%;
-        top: 24%;
-        width: 14%;
-        height: 14%;
+      body.lunar-eclipse .orb::after {
+        opacity: 0.35;
       }
 
       .stars {
@@ -280,6 +291,21 @@
         { type: "lunar", iso: "2028-12-31T16:53:15Z", windowHours: 4 }
       ];
 
+      const lunarCycleMs = 29.530588853 * 24 * 60 * 60 * 1000;
+      const knownNewMoonUtc = Date.UTC(2000, 0, 6, 18, 14);
+      const moonShadow = "rgba(13, 23, 42, 0.9)";
+      const moonPhases = [
+        { key: "new", aliases: ["new", "nova"], mask: "rgba(13, 23, 42, 0.96)", x: "0", opacity: "0.96" },
+        { key: "waxing-crescent", aliases: ["waxing-crescent", "crescente"], mask: moonShadow, x: "-18%", opacity: "1" },
+        { key: "first-quarter", aliases: ["first-quarter", "quarto-crescente"], mask: `linear-gradient(90deg, ${moonShadow} 0 50%, transparent 50%)`, x: "0", opacity: "1" },
+        { key: "waxing-gibbous", aliases: ["waxing-gibbous", "gibosa-crescente"], mask: moonShadow, x: "-74%", opacity: "1" },
+        { key: "full", aliases: ["full", "cheia"], mask: moonShadow, x: "0", opacity: "0" },
+        { key: "waning-gibbous", aliases: ["waning-gibbous", "gibosa-minguante"], mask: moonShadow, x: "74%", opacity: "1" },
+        { key: "last-quarter", aliases: ["last-quarter", "quarto-minguante"], mask: `linear-gradient(90deg, transparent 0 50%, ${moonShadow} 50%)`, x: "0", opacity: "1" },
+        { key: "waning-crescent", aliases: ["waning-crescent", "minguante"], mask: moonShadow, x: "18%", opacity: "1" }
+      ];
+      const moonPhaseByAlias = new Map(moonPhases.flatMap((phase) => phase.aliases.map((alias) => [alias, phase])));
+
       function mixChannel(a, b, amount) {
         return Math.round(a + (b - a) * amount);
       }
@@ -328,6 +354,18 @@
           .find((event) => event.strength > 0);
       }
 
+      function moonPhaseForDate(now, params) {
+        const requestedPhase = params.get("moon")?.toLowerCase();
+
+        if (moonPhaseByAlias.has(requestedPhase)) {
+          return moonPhaseByAlias.get(requestedPhase);
+        }
+
+        const cyclePosition = (((now.getTime() - knownNewMoonUtc) % lunarCycleMs) + lunarCycleMs) % lunarCycleMs / lunarCycleMs;
+        const phaseIndex = Math.floor(((cyclePosition + 1 / 16) % 1) * moonPhases.length);
+        return moonPhases[phaseIndex];
+      }
+
       function updateSky() {
         const now = new Date();
         const params = new URLSearchParams(window.location.search);
@@ -347,10 +385,12 @@
         const y = 72 - Math.sin(Math.PI * progress) * 56;
         const palette = paletteForHour(hour);
         const event = activeEclipse(now, params);
+        const moonPhase = moonPhaseForDate(now, params);
 
         document.body.classList.toggle("night", !isDay);
         document.body.classList.toggle("solar-eclipse", event?.type === "solar");
         document.body.classList.toggle("lunar-eclipse", event?.type === "lunar");
+        document.body.dataset.moonPhase = moonPhase.key;
         document.documentElement.style.setProperty("--orb-x", `${x}%`);
         document.documentElement.style.setProperty("--orb-y", `${y}%`);
         document.documentElement.style.setProperty("--sky-top", toRgb(palette.top));
@@ -360,6 +400,9 @@
         document.documentElement.style.setProperty("--cloud-opacity", palette.cloud.toFixed(3));
         document.documentElement.style.setProperty("--orb", isDay ? "#ffd15f" : "#f8f4d8");
         document.documentElement.style.setProperty("--orb-glow", isDay ? "rgba(255, 209, 95, 0.36)" : "rgba(248, 244, 216, 0.22)");
+        document.documentElement.style.setProperty("--moon-phase-mask", moonPhase.mask);
+        document.documentElement.style.setProperty("--moon-phase-opacity", moonPhase.opacity);
+        document.documentElement.style.setProperty("--moon-phase-x", moonPhase.x);
         document.documentElement.style.setProperty("--eclipse-opacity", event?.type === "solar" ? event.strength.toFixed(3) : "0");
         document.documentElement.style.setProperty("--eclipse-shift", event?.type === "solar" ? `${(1 - event.strength) * 46}px` : "0px");
         requestAnimationFrame(updateSky);
