@@ -1,50 +1,48 @@
-<svg width="400" height="180" viewBox="0 0 400 180" fill="none"
+<svg width="300" height="135" viewBox="0 0 300 135" fill="none"
   xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="langs-title langs-desc">
   <title id="langs-title">Linguagens mais utilizadas</title>
-  <desc id="langs-desc">Rust 31.69%, TypeScript 30.15%, JavaScript 15.06%, C# 9.31%, CSS 8.61%, VBScript 5.18%. Dados públicos e privados.</desc>
+  <desc id="langs-desc">Rust 31.68%, TypeScript 30.15%, JavaScript 15.06%, C# 9.31%, CSS 8.61%, VBScript 5.18%.</desc>
   <style>
     .language { font: 600 11px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
     .empty { font: 600 13px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
-    .scope { font: 400 10px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
   </style>
   <defs>
     <clipPath id="language-progress-mask">
-      <rect x="24" y="24" width="352" height="8" rx="4"/>
+      <rect x="25" y="25" width="250" height="8" rx="5"/>
     </clipPath>
   </defs>
-  <rect x="0.5" y="0.5" width="399" height="179" rx="4.5" fill="transparent"
+  <rect x="0.5" y="0.5" width="299" height="134" rx="4.5" fill="transparent"
     stroke="#e4e2e2" stroke-opacity="0"/>
   <g clip-path="url(#language-progress-mask)">
-    <rect x="24.00" y="24" width="111.53" height="8" fill="#dea584"/>
-    <rect x="135.53" y="24" width="106.11" height="8" fill="#3178c6"/>
-    <rect x="241.64" y="24" width="53.01" height="8" fill="#f1e05a"/>
-    <rect x="294.65" y="24" width="32.78" height="8" fill="#178600"/>
-    <rect x="327.43" y="24" width="30.32" height="8" fill="#663399"/>
-    <rect x="357.75" y="24" width="18.25" height="8" fill="#15dcdc"/>
+    <rect x="25.00" y="25" width="79.21" height="8" fill="#dea584"/>
+    <rect x="104.21" y="25" width="75.37" height="8" fill="#3178c6"/>
+    <rect x="179.58" y="25" width="37.65" height="8" fill="#f1e05a"/>
+    <rect x="217.23" y="25" width="23.28" height="8" fill="#178600"/>
+    <rect x="240.51" y="25" width="21.53" height="8" fill="#663399"/>
+    <rect x="262.04" y="25" width="12.96" height="8" fill="#15dcdc"/>
   </g>
-  <g transform="translate(24 66)">
-    <circle cx="5" cy="-4" r="5" fill="#dea584"/>
-    <text class="language" x="16" y="0">Rust 31,69%</text>
+  <g transform="translate(25 50)">
+    <circle cx="5" cy="6" r="5" fill="#dea584"/>
+    <text class="language" x="15" y="10">Rust 31,68%</text>
   </g>
-  <g transform="translate(24 95)">
-    <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
-    <text class="language" x="16" y="0">TypeScript 30,15%</text>
+  <g transform="translate(25 75)">
+    <circle cx="5" cy="6" r="5" fill="#3178c6"/>
+    <text class="language" x="15" y="10">TypeScript 30,15%</text>
   </g>
-  <g transform="translate(24 124)">
-    <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
-    <text class="language" x="16" y="0">JavaScript 15,06%</text>
+  <g transform="translate(25 100)">
+    <circle cx="5" cy="6" r="5" fill="#f1e05a"/>
+    <text class="language" x="15" y="10">JavaScript 15,06%</text>
   </g>
-  <g transform="translate(214 66)">
-    <circle cx="5" cy="-4" r="5" fill="#178600"/>
-    <text class="language" x="16" y="0">C# 9,31%</text>
+  <g transform="translate(175 50)">
+    <circle cx="5" cy="6" r="5" fill="#178600"/>
+    <text class="language" x="15" y="10">C# 9,31%</text>
   </g>
-  <g transform="translate(214 95)">
-    <circle cx="5" cy="-4" r="5" fill="#663399"/>
-    <text class="language" x="16" y="0">CSS 8,61%</text>
+  <g transform="translate(175 75)">
+    <circle cx="5" cy="6" r="5" fill="#663399"/>
+    <text class="language" x="15" y="10">CSS 8,61%</text>
   </g>
-  <g transform="translate(214 124)">
-    <circle cx="5" cy="-4" r="5" fill="#15dcdc"/>
-    <text class="language" x="16" y="0">VBScript 5,18%</text>
+  <g transform="translate(175 100)">
+    <circle cx="5" cy="6" r="5" fill="#15dcdc"/>
+    <text class="language" x="15" y="10">VBScript 5,18%</text>
   </g>
-  <text class="scope" x="24" y="169">Dados públicos e privados</text>
 </svg>
