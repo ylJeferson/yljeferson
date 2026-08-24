@@ -1,0 +1,48 @@
+name: Atualizar estatísticas do perfil
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-profile-stats.yml"
+      - "scripts/generate_profile_stats.py"
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+
+      - name: Gerar cartões
+        env:
+          PROFILE_USERNAME: ${{ github.repository_owner }}
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          PUBLIC_API_TOKEN: ${{ github.token }}
+        run: python3 scripts/generate_profile_stats.py
+
+      - name: Publicar atualização
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/profile-stats.svg assets/top-languages.svg; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- assets/profile-stats.svg assets/top-languages.svg
+          git commit -m "Manutenção: atualiza estatísticas do perfil"
+          git push origin HEAD:main

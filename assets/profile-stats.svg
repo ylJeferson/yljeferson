@@ -1,0 +1,41 @@
+<svg width="400" height="180" viewBox="0 0 400 180" fill="none"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stats-title stats-desc">
+  <title id="stats-title">Estatísticas do GitHub</title>
+  <desc id="stats-desc">9 repositórios, 473 commits, 0 pull requests e 0 issues. Dados públicos e privados.</desc>
+  <style>
+    .header { font: 600 18px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #7957d5; }
+    .label { font: 600 13px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #539bf5; }
+    .value { font: 700 13px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #539bf5; }
+    .scope { font: 400 10px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
+  </style>
+  <rect x="0.5" y="0.5" width="399" height="179" rx="4.5" fill="transparent"
+    stroke="#e4e2e2" stroke-opacity="0"/>
+  <text class="header" x="24" y="32">Estatísticas</text>
+  <line x1="24" y1="43" x2="376" y2="43" stroke="#7957d5" stroke-opacity="0.22"/>
+    <g transform="translate(24 62)">
+      <circle cx="5" cy="-4" r="4" fill="#ff3860"/>
+      <text class="label" x="18" y="0">Repositórios analisados</text>
+      <text class="value" x="352" y="0" text-anchor="end">9</text>
+    </g>
+    <g transform="translate(24 83)">
+      <circle cx="5" cy="-4" r="4" fill="#ff3860"/>
+      <text class="label" x="18" y="0">Total de estrelas</text>
+      <text class="value" x="352" y="0" text-anchor="end">0</text>
+    </g>
+    <g transform="translate(24 104)">
+      <circle cx="5" cy="-4" r="4" fill="#ff3860"/>
+      <text class="label" x="18" y="0">Total de commits</text>
+      <text class="value" x="352" y="0" text-anchor="end">473</text>
+    </g>
+    <g transform="translate(24 125)">
+      <circle cx="5" cy="-4" r="4" fill="#ff3860"/>
+      <text class="label" x="18" y="0">Pull requests</text>
+      <text class="value" x="352" y="0" text-anchor="end">0</text>
+    </g>
+    <g transform="translate(24 146)">
+      <circle cx="5" cy="-4" r="4" fill="#ff3860"/>
+      <text class="label" x="18" y="0">Issues</text>
+      <text class="value" x="352" y="0" text-anchor="end">0</text>
+    </g>
+  <text class="scope" x="24" y="169">Dados públicos e privados</text>
+</svg>
