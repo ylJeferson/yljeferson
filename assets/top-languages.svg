@@ -14,9 +14,9 @@
   <rect x="0.5" y="0.5" width="299" height="134" rx="4.5" fill="transparent"
     stroke="#e4e2e2" stroke-opacity="0"/>
   <g clip-path="url(#language-progress-mask)">
-    <rect x="25.00" y="25" width="78.82" height="8" fill="#dea584"/>
-    <rect x="103.82" y="25" width="76.15" height="8" fill="#3178c6"/>
-    <rect x="179.97" y="25" width="37.53" height="8" fill="#f1e05a"/>
+    <rect x="25.00" y="25" width="78.81" height="8" fill="#dea584"/>
+    <rect x="103.81" y="25" width="76.15" height="8" fill="#3178c6"/>
+    <rect x="179.96" y="25" width="37.54" height="8" fill="#f1e05a"/>
     <rect x="217.50" y="25" width="23.13" height="8" fill="#178600"/>
     <rect x="240.63" y="25" width="21.49" height="8" fill="#663399"/>
     <rect x="262.12" y="25" width="12.88" height="8" fill="#15dcdc"/>
