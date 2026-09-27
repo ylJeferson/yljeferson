@@ -1,7 +1,7 @@
 <svg width="300" height="135" viewBox="0 0 300 135" fill="none"
   xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="langs-title langs-desc">
   <title id="langs-title">Linguagens mais utilizadas</title>
-  <desc id="langs-desc">Rust 31.53%, TypeScript 30.46%, JavaScript 15.01%, C# 9.25%, CSS 8.60%, VBScript 5.15%.</desc>
+  <desc id="langs-desc">Rust 31.52%, TypeScript 30.46%, JavaScript 15.02%, C# 9.25%, CSS 8.60%, VBScript 5.15%.</desc>
   <style>
     .language { font: 600 11px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
     .empty { font: 600 13px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
@@ -14,16 +14,16 @@
   <rect x="0.5" y="0.5" width="299" height="134" rx="4.5" fill="transparent"
     stroke="#e4e2e2" stroke-opacity="0"/>
   <g clip-path="url(#language-progress-mask)">
-    <rect x="25.00" y="25" width="78.81" height="8" fill="#dea584"/>
-    <rect x="103.81" y="25" width="76.15" height="8" fill="#3178c6"/>
-    <rect x="179.96" y="25" width="37.54" height="8" fill="#f1e05a"/>
-    <rect x="217.50" y="25" width="23.13" height="8" fill="#178600"/>
-    <rect x="240.63" y="25" width="21.49" height="8" fill="#663399"/>
+    <rect x="25.00" y="25" width="78.80" height="8" fill="#dea584"/>
+    <rect x="103.80" y="25" width="76.14" height="8" fill="#3178c6"/>
+    <rect x="179.95" y="25" width="37.56" height="8" fill="#f1e05a"/>
+    <rect x="217.51" y="25" width="23.13" height="8" fill="#178600"/>
+    <rect x="240.64" y="25" width="21.49" height="8" fill="#663399"/>
     <rect x="262.12" y="25" width="12.88" height="8" fill="#15dcdc"/>
   </g>
   <g transform="translate(25 50)">
     <circle cx="5" cy="6" r="5" fill="#dea584"/>
-    <text class="language" x="15" y="10">Rust 31,53%</text>
+    <text class="language" x="15" y="10">Rust 31,52%</text>
   </g>
   <g transform="translate(25 75)">
     <circle cx="5" cy="6" r="5" fill="#3178c6"/>
@@ -31,7 +31,7 @@
   </g>
   <g transform="translate(25 100)">
     <circle cx="5" cy="6" r="5" fill="#f1e05a"/>
-    <text class="language" x="15" y="10">JavaScript 15,01%</text>
+    <text class="language" x="15" y="10">JavaScript 15,02%</text>
   </g>
   <g transform="translate(175 50)">
     <circle cx="5" cy="6" r="5" fill="#178600"/>
