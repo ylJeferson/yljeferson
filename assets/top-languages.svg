@@ -1,7 +1,7 @@
 <svg width="300" height="135" viewBox="0 0 300 135" fill="none"
   xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="langs-title langs-desc">
   <title id="langs-title">Linguagens mais utilizadas</title>
-  <desc id="langs-desc">TypeScript 36.09%, Rust 24.03%, JavaScript 16.91%, C# 8.96%, CSS 8.65%, HTML 5.36%.</desc>
+  <desc id="langs-desc">TypeScript 36.14%, Rust 24.15%, JavaScript 16.82%, C# 8.92%, CSS 8.60%, HTML 5.38%.</desc>
   <style>
     .language { font: 600 11px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
     .empty { font: 600 13px "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif; fill: #1d87da; }
@@ -14,35 +14,35 @@
   <rect x="0.5" y="0.5" width="299" height="134" rx="4.5" fill="transparent"
     stroke="#e4e2e2" stroke-opacity="0"/>
   <g clip-path="url(#language-progress-mask)">
-    <rect x="25.00" y="25" width="90.23" height="8" fill="#3178c6"/>
-    <rect x="115.23" y="25" width="60.08" height="8" fill="#dea584"/>
-    <rect x="175.31" y="25" width="42.27" height="8" fill="#f1e05a"/>
-    <rect x="217.58" y="25" width="22.41" height="8" fill="#178600"/>
-    <rect x="239.99" y="25" width="21.61" height="8" fill="#663399"/>
-    <rect x="261.61" y="25" width="13.39" height="8" fill="#e34c26"/>
+    <rect x="25.00" y="25" width="90.35" height="8" fill="#3178c6"/>
+    <rect x="115.35" y="25" width="60.37" height="8" fill="#dea584"/>
+    <rect x="175.71" y="25" width="42.05" height="8" fill="#f1e05a"/>
+    <rect x="217.76" y="25" width="22.29" height="8" fill="#178600"/>
+    <rect x="240.05" y="25" width="21.50" height="8" fill="#663399"/>
+    <rect x="261.54" y="25" width="13.46" height="8" fill="#e34c26"/>
   </g>
   <g transform="translate(25 50)">
     <circle cx="5" cy="6" r="5" fill="#3178c6"/>
-    <text class="language" x="15" y="10">TypeScript 36,09%</text>
+    <text class="language" x="15" y="10">TypeScript 36,14%</text>
   </g>
   <g transform="translate(25 75)">
     <circle cx="5" cy="6" r="5" fill="#dea584"/>
-    <text class="language" x="15" y="10">Rust 24,03%</text>
+    <text class="language" x="15" y="10">Rust 24,15%</text>
   </g>
   <g transform="translate(25 100)">
     <circle cx="5" cy="6" r="5" fill="#f1e05a"/>
-    <text class="language" x="15" y="10">JavaScript 16,91%</text>
+    <text class="language" x="15" y="10">JavaScript 16,82%</text>
   </g>
   <g transform="translate(175 50)">
     <circle cx="5" cy="6" r="5" fill="#178600"/>
-    <text class="language" x="15" y="10">C# 8,96%</text>
+    <text class="language" x="15" y="10">C# 8,92%</text>
   </g>
   <g transform="translate(175 75)">
     <circle cx="5" cy="6" r="5" fill="#663399"/>
-    <text class="language" x="15" y="10">CSS 8,65%</text>
+    <text class="language" x="15" y="10">CSS 8,60%</text>
   </g>
   <g transform="translate(175 100)">
     <circle cx="5" cy="6" r="5" fill="#e34c26"/>
-    <text class="language" x="15" y="10">HTML 5,36%</text>
+    <text class="language" x="15" y="10">HTML 5,38%</text>
   </g>
 </svg>
