@@ -100,7 +100,7 @@ Sempre em busca do conhecimento, desvendando os mistérios da tecnologia e trans
 <img align="right" alt="Ilustração do perfil" height="150" src="https://user-images.githubusercontent.com/27925751/177058977-0789aa58-bed0-48e9-8091-7752adcf2ec9.png">
 
 - 📚 Estudante autodidata de programação e entusiasta de conhecimentos intrigantes
-- 🎓 Técnico de Informática em [Etec Joaquim Ferreira do Amaral](http://www.etecjau.com.br/etecjau/)
+- 🎓 Técnico de Informática em [Etec Joaquim Ferreira do Amaral](https://etecjau.cps.sp.gov.br/)
 - 💼 Assistente de TI em [Kazzo Confecções e Comércio de Artigos do Vestuário LTDA](https://pt-br.facebook.com/kazzojeans/)
 - ❤️ Solteiro como um código livre, pronto para novas colaborações.
 - 💬 Tem alguma pergunta? Fale comigo [aqui](https://github.com/yljeferson/yljeferson/issues)
